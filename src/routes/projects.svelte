@@ -1,3 +1,18 @@
-<h1>
-    HELLO WORLD!!
-</h1>
+<script>
+  import * as Card from "$lib/components/ui/card";
+  import { Badge } from "$lib/components/ui/badge";
+  import { projects, experience } from "$lib/data";
+  import * as ToggleGroup from "$lib/components/ui/toggle-group";
+  import ResumeCards from "./resumeCards.svelte";
+
+</script>
+
+<div class="flex flex-col space-y-4">
+    <ResumeCards cardList={experience} cardListName="Experience">
+
+    </ResumeCards>
+    <ResumeCards cardList={projects} cardListName="Projects">
+        
+    </ResumeCards>
+    
+</div>
