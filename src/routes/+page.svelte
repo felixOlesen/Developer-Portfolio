@@ -48,14 +48,30 @@
         </div>
     </div>
     <div class="flex min-h-screen w-1/2 flex-col pt-0 pr-12 justify-center">
-        
-        <ScrollArea class="flex justify-center w-3/4 h-screen rounded-sm p-2" orientation="vertical">
+        <div class="overflow-scroll hideScroll w-3/4 h-screen p-2">
             <Projects></Projects>
-        </ScrollArea>
+        </div>
+        
+        <!-- <ScrollArea id="scrollingBlock" class="flex hideScroll justify-center w-3/4 h-screen rounded-sm p-2" orientation="vertical">
+            <Projects></Projects>
+        </ScrollArea> -->
     </div>
 </div>
 
 
+<style>
+	.hideScroll::-webkit-scrollbar { display: none; }
+	.hidescroll {
+  	-ms-overflow-style: none;  /* IE and Edge */
+  	scrollbar-width: none;     /* Firefox */
+	}
+	.spacer { height: 10vh; }
+	#scrollingBlock {
+		border: 2px solid black;
+		/*box-shadow: 10px 5px 5px red;*/
+		overflow-y: scroll;
+	}
+</style>
 
 
 
