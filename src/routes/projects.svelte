@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import * as Card from "$lib/components/ui/card";
   import { Badge } from "$lib/components/ui/badge";
   import { projects, experience } from "$lib/data";
@@ -7,11 +7,11 @@
 
 </script>
 
-<div class="flex flex-col space-y-4">
-    <ResumeCards cardList={experience} cardListName="Experience">
+<div class="flex flex-col space-y-4 pt-24">
+    <ResumeCards cardList={experience} cardListName="Experience" on:cardHover>
 
     </ResumeCards>
-    <ResumeCards cardList={projects} cardListName="Projects">
+    <ResumeCards cardList={projects} cardListName="Projects" on:cardHover>
         
     </ResumeCards>
     

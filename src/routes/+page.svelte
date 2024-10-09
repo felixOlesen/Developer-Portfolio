@@ -5,26 +5,21 @@
     import { info } from '$lib/data.js';
     import Projects from "./projects.svelte";
     import * as Menubar from "$lib/components/ui/menubar";
+    import ProjectOverview from "./projectOverview.svelte";
+
+    $: activeProject = null;
+
+    function handleCardHover(event:any) {
+        activeProject = event.detail.project;
+    }
+
 </script>
 
 
 
 <div class="flex flex-row">
-    <div class="flex flex-col w-1/2 ">
-        <div class="flex pl-6 ">
-            <Menubar.Root>
-                <Menubar.Menu>
-                    <Menubar.Trigger>About</Menubar.Trigger>
-                </Menubar.Menu>
-                <Menubar.Menu>
-                    <Menubar.Trigger>Contact</Menubar.Trigger>
-                </Menubar.Menu>
-                <Menubar.Menu>
-                    <Menubar.Trigger>Resume</Menubar.Trigger>
-                </Menubar.Menu>
-            </Menubar.Root>
-        </div>
-        <div class="flex flex-row items-center justify-center space-x-4 pt-10 pb-4 ">
+    <div class="flex flex-col w-1/2 pt-12 items-center ">
+        <div class="flex flex-row items-center space-x-4 pt-10 pb-4  w-3/5">
             <div class="">
                 <Avatar.Root class="h-24 w-24">
                     <Avatar.Image src={image} alt="FO" />
@@ -40,21 +35,16 @@
                 </h2>
             </div>
         </div>
-        <div class="pl-32">
-            <p>{info.about}</p>
-        </div>
-        <div class="b">
-
+        <div class="w-3/5">
+            {#if activeProject != null}
+                <ProjectOverview project={activeProject}></ProjectOverview>
+            {/if}
         </div>
     </div>
-    <div class="flex min-h-screen w-1/2 flex-col pt-0 pr-12 justify-center">
+    <div class="flex min-h-screen w-1/2 flex-col pt-0 pr-12">
         <div class="overflow-scroll hideScroll w-3/4 h-screen p-2">
-            <Projects></Projects>
+            <Projects on:cardHover={handleCardHover}></Projects>
         </div>
-        
-        <!-- <ScrollArea id="scrollingBlock" class="flex hideScroll justify-center w-3/4 h-screen rounded-sm p-2" orientation="vertical">
-            <Projects></Projects>
-        </ScrollArea> -->
     </div>
 </div>
 
