@@ -2,14 +2,13 @@
     import { createEventDispatcher } from "svelte";
     import * as Card from "$lib/components/ui/card";
     import { Badge } from "$lib/components/ui/badge";
-    import * as ToggleGroup from "$lib/components/ui/toggle-group";
+    import CardContent from "$lib/components/ui/card/card-content.svelte";
 
     const dispatch = createEventDispatcher();
 
     export let cardList;
-    export let cardListName;
-    let fart:string;
     function handleHover(project:any) {
+        console.log("I'm working!");
         dispatch('cardHover', {
             project: project
         });
@@ -17,38 +16,24 @@
   
 </script>
 
-<h1 class="text-2xl">{cardListName}</h1>
-<!-- <div class="place-self-start pl-6">
-    <ToggleGroup.Root size="sm" type="multiple" variant="outline">
-        <ToggleGroup.Item value="gameDev">Game Dev</ToggleGroup.Item>
-        <ToggleGroup.Item value="softwareDev">Software Dev</ToggleGroup.Item>
-        <ToggleGroup.Item value="machineLearn">ML</ToggleGroup.Item>
-        <ToggleGroup.Item value="qualityAssur">QA</ToggleGroup.Item>
-        </ToggleGroup.Root>
-</div> -->
 {#each cardList as project}
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- <a on:click={() => handleClick(project.role)} on:keypress={() => handleClick(project.role)} href="/"> -->
-    <Card.Root class="rounded-sm hover:bg-slate-200 border-0">
-        <div class="flex flex-row" on:mouseenter={() => handleHover(project)}>
-            <div class="flex pt-2 pl-2 w-2/5">
-                <h1>
-                    {project.duration}
-                </h1>
-            </div>
-            <div class="w-full">
-                <Card.Header class="p-2 pl-0">
-                    <Card.Title>{project.role}</Card.Title>
-                    <Card.Description>{project.description}</Card.Description>
-                </Card.Header>
-                
-                <Card.Footer class="p-1 pl-0 w-full space-x-1 space-y-1 flex flex-row flex-wrap">
-                    {#each project.tags as tag}
-                        <Badge variant="outline" class="flex justify-center">{tag}</Badge>
-                    {/each}
-                </Card.Footer>
-            </div>
-        </div>
-    </Card.Root>
+<Card.Root class="min-w-96 max-h-48 rounded-xl overflow-scroll hover:bg-primary border-0 shadow-inner">
+    <div on:mouseenter={() => handleHover(project)}>
+        <Card.Header class="">
+            <Card.Title><h1>{project.role}</h1></Card.Title>
+            <Card.Description><p class="mx-3">{project.description}</p></Card.Description>
+        </Card.Header>
+        <Card.Content class=" p-1">
+            <!-- <p>{project.description}</p> -->
+        </Card.Content>
+        <Card.Footer class="flex flex-row flex-wrap space-x-1 space-y-1 items-center ">
+            {#each project.tags as tag}
+                <Badge variant="outline" class="justify-center mt-1 bg-primary">{tag}</Badge>
+            {/each}
+        </Card.Footer>
+    </div>
+</Card.Root>
 <!-- </a> -->
 {/each}

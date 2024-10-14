@@ -149,4 +149,74 @@ export const projects = [
         overviewDuration: 'December 2023 -  February 2024'
 
     },
+    {
+        role: 'Bugs TDF',
+        duration: '2023 - 2024',
+        projectOrProfession: 'Game Dev Project',
+        description: 'Designed, developed, and published a sci-fi tower defence game with Unity and C#.',
+        tags: ['C#', 'Unity', 'Github', 'Game Design', 'OOP'],
+        filterable: 'gameDev',
+        overviewDescription: [],
+        overviewMedia: [],
+        githubLink: '',
+        alternateLink: '',
+        overviewDuration: 'December 2023 -  February 2024'
+
+    },
+    {
+        role: 'Bugs TDF',
+        duration: '2023 - 2024',
+        projectOrProfession: 'Game Dev Project',
+        description: 'Designed, developed, and published a sci-fi tower defence game with Unity and C#.',
+        tags: ['C#', 'Unity', 'Github', 'Game Design', 'OOP'],
+        filterable: 'gameDev',
+        overviewDescription: [],
+        overviewMedia: [],
+        githubLink: '',
+        alternateLink: '',
+        overviewDuration: 'December 2023 -  February 2024'
+
+    },
+    {
+        role: 'Bugs TDF',
+        duration: '2023 - 2024',
+        projectOrProfession: 'Game Dev Project',
+        description: 'Designed, developed, and published a sci-fi tower defence game with Unity and C#.',
+        tags: ['C#', 'Unity', 'Github', 'Game Design', 'OOP'],
+        filterable: 'gameDev',
+        overviewDescription: [],
+        overviewMedia: [],
+        githubLink: '',
+        alternateLink: '',
+        overviewDuration: 'December 2023 -  February 2024'
+
+    },
+    {
+        role: 'Bugs TDF',
+        duration: '2023 - 2024',
+        projectOrProfession: 'Game Dev Project',
+        description: 'Designed, developed, and published a sci-fi tower defence game with Unity and C#.',
+        tags: ['C#', 'Unity', 'Github', 'Game Design', 'OOP'],
+        filterable: 'gameDev',
+        overviewDescription: [],
+        overviewMedia: [],
+        githubLink: '',
+        alternateLink: '',
+        overviewDuration: 'December 2023 -  February 2024'
+
+    },
+    {
+        role: 'Bugs TDF',
+        duration: '2023 - 2024',
+        projectOrProfession: 'Game Dev Project',
+        description: 'Designed, developed, and published a sci-fi tower defence game with Unity and C#.',
+        tags: ['C#', 'Unity', 'Github', 'Game Design', 'OOP'],
+        filterable: 'gameDev',
+        overviewDescription: [],
+        overviewMedia: [],
+        githubLink: '',
+        alternateLink: '',
+        overviewDuration: 'December 2023 -  February 2024'
+
+    },
 ]
