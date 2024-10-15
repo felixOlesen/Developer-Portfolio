@@ -19,8 +19,8 @@
 {#each cardList as project}
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- <a on:click={() => handleClick(project.role)} on:keypress={() => handleClick(project.role)} href="/"> -->
-<Card.Root class="min-w-96 max-h-48 rounded-xl overflow-scroll hover:bg-primary border-0 shadow-inner">
-    <div on:mouseenter={() => handleHover(project)}>
+<Card.Root class="min-w-96 max-h-48 rounded-xl hover:bg-primary border-0 shadow-inner">
+    <div class="scroller" on:mouseenter={() => handleHover(project)}>
         <Card.Header class="">
             <Card.Title><h1>{project.role}</h1></Card.Title>
             <Card.Description><p class="mx-3">{project.description}</p></Card.Description>
@@ -37,3 +37,12 @@
 </Card.Root>
 <!-- </a> -->
 {/each}
+
+<style>
+div.scroller {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-color: rgba(0,0,0,0) rgba(0,0,0,0);
+} 
+</style>

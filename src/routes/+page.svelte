@@ -77,7 +77,6 @@
     </div>
 </div> -->
 
-
 <style>
 	.hideScroll::-webkit-scrollbar { display: none; }
 	.hidescroll {

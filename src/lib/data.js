@@ -14,7 +14,7 @@ export const experience = [
         tags: ['PHP', 'SQL', 'JQuery', 'Tailwind', 'OOP', 'JavaScript'],
         filterable: 'softwareDev',
         overviewDescription: ['The refactoring work began with editing old code for browser alerts to be changed to calling a new oo-ified alert module for the platform to allow for cleaner code. This gave me a better understanding of the codebase as a whole by sifting through each file and searching for different alert scenarios.', 'From then on I worked on more complex bug-fixing tasks and module development where I first started interacting with students to understand why they wanted certain changes.', 'I developed a new house-points display system for students and faculty to check how their intermural competitions were going.'],
-        overviewMedia: ['src/lib/assets/gibbon/gibbonShowcase.gif', 'src//assets/gibbon/gibbonDevSite.png'],
+        overviewMedia: ['$lib/assets/gibbon/gibbonDevSite.webp'],
         githubLink: 'https://github.com/GibbonEdu/core',
         alternateLink: 'https://gibbonedu.org',
         overviewDuration: 'December 2023 -  February 2024'
@@ -28,7 +28,7 @@ export const experience = [
         tags: ['Testing', 'Bash', 'Jira', 'Jenkins', 'Python', 'QA', 'Python', 'VueJS', 'Tailwind', 'Flask'],
         filterable: 'qualityAssurance',
         overviewDescription: ['Manually tested the end-to-end video-on-demand services associated with the all SkyQ platforms (8 different machines).', 'Implemented a brand new full-stack test tool in VueJs, Tailwind CSS, and Flask. This allowed for testers to have a smooth user experience while updating the video-on-demand catalogue on SkyQ boxes.', 'I also approached the test automation team to get involved with automating my own test cases, allowing for more attention towards important bug testing requests.'],
-        overviewMedia: ['src/lib/assets/sky/skyCentral.png', 'src/lib/assets/sky/sky4.png'],
+        overviewMedia: ['$lib/assets/sky/skyCentral.webp', '$lib/assets/sky/sky4.webp'],
         githubLink: '',
         alternateLink: 'https://www.sky.com/tv/sky-q',
         overviewDuration: 'December 2023 -  February 2024'
