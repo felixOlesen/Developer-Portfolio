@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { projects, experience } from "$lib/data";
+  import * as Carousel from "$lib/components/ui/carousel/index.js";
   import ResumeCards from "./resumeCards.svelte";
+  export let resumeData;
 
+  let displayableCards = resumeData.experience.concat(resumeData.projects);
 </script>
-
-<ResumeCards cardList={experience} on:cardHover></ResumeCards>
-<ResumeCards cardList={projects} on:cardHover></ResumeCards>
+<ResumeCards cardList={displayableCards}></ResumeCards>

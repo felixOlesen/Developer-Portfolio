@@ -1,5 +1,6 @@
 export const info =
 {
+    name: 'Felix Sylvest Olesen',
     title: 'Computer Science Graduate',
     about: 'More about me',
     aboutThisSite: 'This web app was made using Svelte and ShadCN UI and hosted using Vercel.'
