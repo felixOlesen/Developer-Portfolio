@@ -16,10 +16,11 @@ export const experience = [
         tags: ['PHP', 'SQL', 'JQuery', 'Tailwind', 'OOP', 'JavaScript'],
         filterable: 'softwareDev',
         overviewDescription: ['The refactoring work began with editing old code for browser alerts to be changed to calling a new oo-ified alert module for the platform to allow for cleaner code. This gave me a better understanding of the codebase as a whole by sifting through each file and searching for different alert scenarios.', 'From then on I worked on more complex bug-fixing tasks and module development where I first started interacting with students to understand why they wanted certain changes.', 'I developed a new house-points display system for students and faculty to check how their intermural competitions were going.'],
-        overviewMedia: ['src/lib/assets/gibbon/gibbonDevSite.webp'],
+        overviewMedia: ['src/lib/assets/gibbon/gibbonDevSite.webp', 'src/lib/assets/gibbon/ichkMainSite.webp', 'src/lib/assets/gibbon/ichkSecondaryGibbon.webp'],
         githubLink: 'https://github.com/GibbonEdu/core',
         alternateLink: 'https://gibbonedu.org',
-        overviewDuration: 'December 2023 -  February 2024'
+        overviewDuration: 'December 2023 -  February 2024',
+        technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg']
 
     },
     {
@@ -30,10 +31,11 @@ export const experience = [
         tags: ['Testing', 'Bash', 'Jira', 'Jenkins', 'Python', 'QA', 'Python', 'VueJS', 'Tailwind', 'Flask'],
         filterable: 'qualityAssurance',
         overviewDescription: ['Manually tested the end-to-end video-on-demand services associated with the all SkyQ platforms (8 different machines).', 'Implemented a brand new full-stack test tool in VueJs, Tailwind CSS, and Flask. This allowed for testers to have a smooth user experience while updating the video-on-demand catalogue on SkyQ boxes.', 'I also approached the test automation team to get involved with automating my own test cases, allowing for more attention towards important bug testing requests.'],
-        overviewMedia: ['src/lib/assets/sky/skyCentral.webp', 'src/lib/assets/sky/sky4.webp'],
+        overviewMedia: ['src/lib/assets/sky/skyBeReal.webp', 'src/lib/assets/sky/skyCentral.webp', 'src/lib/assets/sky/sky4.webp', 'src/lib/assets/sky/sky4Interior.webp'],
         githubLink: '',
         alternateLink: 'https://www.sky.com/tv/sky-q',
-        overviewDuration: 'December 2023 -  February 2024'
+        overviewDuration: 'December 2023 -  February 2024',
+        technologies: []
 
     }
 ]
@@ -50,7 +52,8 @@ export const projects = [
         overviewMedia: [],
         githubLink: '',
         alternateLink: '',
-        overviewDuration: 'December 2023 -  February 2024'
+        overviewDuration: 'December 2023 -  February 2024',
+        technologies: []
 
     },
     {
@@ -64,7 +67,8 @@ export const projects = [
         overviewMedia: [],
         githubLink: '',
         alternateLink: '',
-        overviewDuration: 'December 2023 -  February 2024'
+        overviewDuration: 'December 2023 -  February 2024',
+        technologies: []
 
     },
     {
@@ -78,7 +82,8 @@ export const projects = [
         overviewMedia: [],
         githubLink: '',
         alternateLink: '',
-        overviewDuration: 'December 2023 -  February 2024'
+        overviewDuration: 'December 2023 -  February 2024',
+        technologies: []
 
     },
     {
@@ -92,7 +97,8 @@ export const projects = [
         overviewMedia: [],
         githubLink: '',
         alternateLink: '',
-        overviewDuration: 'December 2023 -  February 2024'
+        overviewDuration: 'December 2023 -  February 2024',
+        technologies: []
 
     },
     {
@@ -106,7 +112,8 @@ export const projects = [
         overviewMedia: [],
         githubLink: '',
         alternateLink: '',
-        overviewDuration: 'December 2023 -  February 2024'
+        overviewDuration: 'December 2023 -  February 2024',
+        technologies: []
 
     },
     {
@@ -120,7 +127,8 @@ export const projects = [
         overviewMedia: [],
         githubLink: '',
         alternateLink: '',
-        overviewDuration: 'December 2023 -  February 2024'
+        overviewDuration: 'December 2023 -  February 2024',
+        technologies: []
 
     },
     {
@@ -134,7 +142,8 @@ export const projects = [
         overviewMedia: [],
         githubLink: '',
         alternateLink: '',
-        overviewDuration: 'December 2023 -  February 2024'
+        overviewDuration: 'December 2023 -  February 2024',
+        technologies: []
 
     },
     {
@@ -148,7 +157,8 @@ export const projects = [
         overviewMedia: [],
         githubLink: '',
         alternateLink: '',
-        overviewDuration: 'December 2023 -  February 2024'
+        overviewDuration: 'December 2023 -  February 2024',
+        technologies: []
 
     },
     {
@@ -162,7 +172,8 @@ export const projects = [
         overviewMedia: [],
         githubLink: '',
         alternateLink: '',
-        overviewDuration: 'December 2023 -  February 2024'
+        overviewDuration: 'December 2023 -  February 2024',
+        technologies: []
 
     },
     {
@@ -176,7 +187,8 @@ export const projects = [
         overviewMedia: [],
         githubLink: '',
         alternateLink: '',
-        overviewDuration: 'December 2023 -  February 2024'
+        overviewDuration: 'December 2023 -  February 2024',
+        technologies: []
 
     },
     {
@@ -190,7 +202,8 @@ export const projects = [
         overviewMedia: [],
         githubLink: '',
         alternateLink: '',
-        overviewDuration: 'December 2023 -  February 2024'
+        overviewDuration: 'December 2023 -  February 2024',
+        technologies: []
 
     },
     {
@@ -204,7 +217,8 @@ export const projects = [
         overviewMedia: [],
         githubLink: '',
         alternateLink: '',
-        overviewDuration: 'December 2023 -  February 2024'
+        overviewDuration: 'December 2023 -  February 2024',
+        technologies: []
 
     },
     {
@@ -218,7 +232,8 @@ export const projects = [
         overviewMedia: [],
         githubLink: '',
         alternateLink: '',
-        overviewDuration: 'December 2023 -  February 2024'
+        overviewDuration: 'December 2023 -  February 2024',
+        technologies: []
 
     },
 ]
