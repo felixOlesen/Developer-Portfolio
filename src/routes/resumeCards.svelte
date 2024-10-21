@@ -1,9 +1,18 @@
 <script lang="ts">
-    import * as Carousel from "$lib/components/ui/carousel/index.js";
-    import { createEventDispatcher } from "svelte";
-    import * as Card from "$lib/components/ui/card";
     import { Badge } from "$lib/components/ui/badge";
-    import CardContent from "$lib/components/ui/card/card-content.svelte";
+    import { fade} from 'svelte/transition';
+    import { onNavigate } from '$app/navigation';
+
+    onNavigate((navigation) => {
+	if (!document.startViewTransition) return;
+
+	return new Promise((resolve) => {
+            document.startViewTransition(async () => {
+                resolve();
+                await navigation.complete;
+		    });
+	    });
+    });
     
     let hovering: boolean = false;
     let currentProject: any = null;
@@ -29,13 +38,13 @@
 {#each cardList as project}
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- <Carousel.Item> -->
-<div class="transition ease-in-out min-w-96 scale-90 max-h-52 hover:scale-100" on:mouseenter={() => handleHoverEnter(project)} on:mouseleave={handleHoverLeave}>
+<div class="transition ease-in-out min-w-96 scale-90 max-h-52 hover:scale-100" on:mouseenter={() => handleHoverEnter(project)} on:mouseleave={handleHoverLeave} out:fade>
     <a href="/{project.role}">
-        <div class="flex flex-col h-full w-full p-3 space-y-2 rounded-xl shadow-inner bg-primary scroller justify-center items-center transition-all ease-in-out hover:border hover:shadow-md hover:shadow-primary hover:justify-start ">
+        <div class="flex flex-col h-full w-full p-3 space-y-2 rounded-xl bg-primary scroller justify-center items-center transition-all ease-in-out hover:justify-start deepInnerShadow">
             
             <!-- Header -->
             {#if hovering && currentProject === project}
-                <div class="flex flex-row  w-full">
+                <div class="flex flex-row  w-full" in:fade={{duration:200}}>
                     <div class=" w-1/2 flex flex-row items-center">
                         <!-- Title -->
                         <div class=""><h1 class="text-md font-bold">{project.role}</h1></div>
@@ -49,27 +58,27 @@
                 </div>
             {:else if currentProject !== project}
                 <!-- Title -->
-                <div class="flex flex-col w-full items-center">
+                <div class="flex flex-col w-full items-center" in:fade={{duration:200}}>
                         <div class=""><h1 class="text-xl font-bold">{project.role}</h1></div>
                 </div>
             {/if}
 
             <!-- Content -->
             {#if hovering && currentProject === project}
-                <div class="w-full h-full">
+                <div class="w-full h-full" in:fade={{duration:200}}>
                     <div class="mx-3"><p class="text-sm">{project.description}</p></div>
                 </div>
             {/if}
 
             <!-- Footer -->
             {#if hovering && currentProject === project}
-                <div class="flex flex-row flex-wrap w-full items-end space-x-1 space-y-1 pb-2">
+                <div class="flex flex-row flex-wrap w-full items-end space-x-1 space-y-1 pb-2" in:fade={{duration:200}}>
                     {#each project.tags as tag}
                         <Badge variant="outline" class="justify-center bg-primary h-fit">{tag}</Badge>
                     {/each}
                 </div>
             {:else if currentProject !== project}
-                <div class="flex flex-row flex-wrap w-full items-end justify-center space-x-1 space-y-1 pb-2">
+                <div class="flex flex-row flex-wrap w-full items-end justify-center space-x-1 space-y-1 pb-2" in:fade={{duration:200}}>
                     {#each project.tags as tag}
                         <Badge variant="outline" class="justify-center bg-primary h-fit">{tag}</Badge>
                     {/each}
@@ -87,4 +96,5 @@ div.scroller {
   overflow-y: scroll;
   scrollbar-color: rgba(0,0,0,0) rgba(0,0,0,0);
 } 
+
 </style>

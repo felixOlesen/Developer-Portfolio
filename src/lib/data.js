@@ -3,6 +3,7 @@ export const info =
     name: 'Felix Sylvest Olesen',
     title: 'Computer Science Graduate',
     about: 'More about me',
+    resume: 'Full Resume',
     aboutThisSite: 'This web app was made using Svelte and ShadCN UI and hosted using Vercel.'
 }
 
