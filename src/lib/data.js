@@ -4,7 +4,8 @@ export const info =
     title: 'Computer Science Graduate',
     about: 'More about me',
     resume: 'Full Resume',
-    aboutThisSite: 'This web app was made using Svelte and ShadCN UI and hosted using Vercel.'
+    aboutThisSite: 'This web app was made using Svelte and ShadCN UI and hosted using Vercel.',
+    resumePath: '/assets/resume/Felix S Olesen - Resume.pdf'
 }
 
 export const experience = [

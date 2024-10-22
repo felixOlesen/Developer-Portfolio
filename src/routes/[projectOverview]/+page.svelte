@@ -1,6 +1,5 @@
 <script lang="ts">
     import Socials from "../socials.svelte";
-    import * as Resizable from "$lib/components/ui/resizable";
     import Button from "$lib/components/ui/button/button.svelte";
     import { onNavigate } from '$app/navigation';
 
@@ -39,7 +38,7 @@
         </Button>
         <Socials></Socials>
     </div>
-    <div class="flex flex-row w-11/12">
+    <div class="flex flex-row w-full">
         <!-- Project Text -->
         <div class="flex flex-col w-1/2 space-y-6 m-4">
             <div class="flex flex-col rounded-xl bg-primary deepInnerShadow p-3">
