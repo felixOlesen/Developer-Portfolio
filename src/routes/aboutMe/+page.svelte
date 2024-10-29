@@ -1,8 +1,12 @@
 <script lang="ts">
 import Socials from "../socials.svelte";
 import Button from "$lib/components/ui/button/button.svelte";
-import { onNavigate } from '$app/navigation';
-import * as Carousel from "$lib/components/ui/carousel/index.js";
+import { onNavigate } from "$app/navigation";
+import { aboutMe } from "$lib/data.js";
+
+const gradPhotoUrl: string = aboutMe.media;
+
+
 
 
 onNavigate((navigation) => {
@@ -34,35 +38,23 @@ return new Promise((resolve) => {
         <Socials></Socials>
     </div>
     <!-- About Me Component -->
-     <div class="flex flex-col w-full h-full  items-center p-4 space-y-4">
-        <div class=""><h1 class="text-2xl text-white">About me!</h1></div>
-        <!-- Images Carousel -->
-        <div class="flex w-full rounded-xl bg-primary  justify-center deepInnerShadow p-4">
-            <Carousel.Root opts={{ align: "center", loop: true, }} class="w-full max-w-6xl">
-                <Carousel.Content>
-                    {#each Array(10) as _, i (i)}
-                    <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
-                        <div class="flex p-1  justify-center">
-                            <span class="text-3xl font-semibold">{i + 1}</span>
-                        </div>
-                    </Carousel.Item>
-                    {/each}
-                </Carousel.Content>
-                <Carousel.Previous />
-                <Carousel.Next />
-            </Carousel.Root>
-        </div>
-        <div class="flex flex-row w-full h-full space-x-4 ">
+     <div class="flex flex-col w-full h-full items-center p-4 space-y-4">
+        
+        <div class="flex flex-row w-full h-full space-x-4 items-center justify-center">
             <!-- International Background -->
-            <div class="flex flex-col w-2/5 h-full space-y-4 ">
-                <div class="flex bg-primary rounded-xl h-1/2 w-full deepInnerShadow"></div>
-                <div class="flex bg-primary rounded-xl h-1/2 w-full deepInnerShadow"></div>
+            <div class="flex w-fit h-fit p-4 bg-primary rounded-xl deepInnerShadow">
+                <img class="max-h-[350px]" src={gradPhotoUrl} alt="graduateMedia">
             </div>
             <!-- Aspirations -->
-            <div class="flex w-3/5 h-full ">
-                <div class="bg-primary rounded-xl h-full w-full deepInnerShadow"></div>
+            <div class="flex flex-col max-w-[600px] max-h-[382px] p-4 bg-primary rounded-xl deepInnerShadow space-y-3">
+                <h1 class="text-lg font-semibold">Hi, I'm Felix!</h1>
+                <p class="text-md ml-1 font-light">{aboutMe.origin}</p>
+                <p class="text-md ml-1 font-light">{aboutMe.background}</p>
+                <p class="text-md ml-1 font-light">{aboutMe.hobbies}</p>
+
             </div>
         </div>
+
      </div>
 </div>
 

@@ -93,12 +93,20 @@
                 {#each overview.overviewDescription as paragraph }
                     <p class="text-sm">{paragraph}</p>
                 {/each}
+            </div>
+            <div class="flex flex-col space-y-4 rounded-xl bg-primary p-4 deepInnerShadow">
+                <h1 class="text-lg font-semibold">What I learned</h1>
+                <ul class="list-disc space-y-4">
+                    {#each overview.overviewLessons as paragraph }
+                        <li class="ml-4"><p class="text-sm">{paragraph}</p></li>
+                    {/each}
+                </ul>
                 
             </div>
         </div>
     
         <!-- Project Media -->
-        <div class="flex flex-col w-1/2 space-y-6 p-4 scroller overflow-visible">
+        <div class="flex flex-col w-1/2 space-y-6 p-4 scroller">
             {#each overview.overviewMedia as media, i}
             <div class="transition ease-in-out hover:scale-105 bg-primary rounded-xl p-3 deepInnerShadow">
                 <img src={media} alt="overviewMedia"/>
