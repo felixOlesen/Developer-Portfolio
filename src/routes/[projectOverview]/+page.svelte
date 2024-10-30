@@ -38,7 +38,7 @@
         </Button>
         <Socials></Socials>
     </div>
-    <div class="flex flex-row w-full">
+    <div class="flex flex-row w-full justify-center">
         <!-- Project Text -->
         <div class="flex flex-col w-1/2 space-y-6 m-4">
             <div class="flex flex-col rounded-xl bg-primary deepInnerShadow p-3">
@@ -106,14 +106,25 @@
         </div>
     
         <!-- Project Media -->
-        <div class="flex flex-col w-1/2 space-y-6 p-4 scroller">
-            {#each overview.overviewMedia as media, i}
-            <div class="transition ease-in-out hover:scale-105 bg-primary rounded-xl p-3 deepInnerShadow">
-                <img src={media} alt="overviewMedia"/>
-            </div>
-            {/each}
+        
+         {#if overview.overviewMedia.length > 0 || overview.youtubeVideo !== ''}
+            <div class="flex flex-col w-1/2 space-y-6 p-4 scroller items-center">
+                {#if overview.youtubeVideo !== ''}
+                    <div class="bg-primary rounded-xl p-3 w-full deepInnerShadow h-1/2">
+                        <iframe width="100%" height="400px" src={overview.youtubeVideo} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                {/if}
+                {#if overview.overviewMedia.length > 0}
 
-        </div>
+                    {#each overview.overviewMedia as media, i}
+                    <div class="transition ease-in-out hover:scale-105 bg-primary rounded-xl p-3 w-fit deepInnerShadow">
+                        <img src={media} alt="overviewMedia"/>
+                    </div>
+                    {/each}
+                {/if}
+
+            </div>
+         {/if}
     </div>
 </div>
 
