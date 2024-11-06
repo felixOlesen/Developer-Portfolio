@@ -101,7 +101,7 @@ export const projects = [
         overviewMedia: ['/assets/quadRe/quadre1.webp', '/assets/quadRe/quadre2.webp', '/assets/quadRe/quadre3.webp'],
         githubLink: '',
         alternateLink: '',
-        overviewDuration: 'December 2023 -  February 2024',
+        overviewDuration: 'Mar 2023 - Present 2024',
         technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg'],
         overviewLessons: ['Implementing design patterns allows for a structured and simpler way of designing increasingly complex software systems. It gives you an understanding of how the software should work at a more palatable higher level of abstraction.'],
         youtubeVideo: ''
@@ -109,7 +109,7 @@ export const projects = [
     },
     {
         role: 'Bugs TDF',
-        duration: 'Dec 2023 - Feb 2024',
+        duration: 'Jul 2023 - Mar 2024',
         projectOrProfession: 'Game Dev Project',
         description: 'Designed, developed, and published a sci-fi tower defence game with Unity and C# with inspiration from the Bloons Tower Defence series. Fully published on itch.io for multiple platforms.',
         tags: ['C#', 'Unity', 'Github', 'Game Design', 'OOP'],
@@ -118,7 +118,7 @@ export const projects = [
         overviewMedia: ['/assets/bugsTDF/bugsTDFMainMenu.webp', '/assets/bugsTDF/bugsTDFWelcome.webp', '/assets/bugsTDF/bugsTDFLevel2.webp', '/assets/bugsTDF/bugsTDFLevel3.webp', '/assets/bugsTDF/bugsTDFLevel1GameOver.webp'],
         githubLink: 'https://github.com/felixOlesen/BugsTDF',
         alternateLink: 'https://atomicblitz.itch.io/bugs-tdf',
-        overviewDuration: 'December 2023 -  February 2024',
+        overviewDuration: 'July 2023 -  March 2024',
         technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg'],
         overviewLessons: ['Planning and design choices made early on in the project can streamline the development process by tenfold if well thought out. Exploring each individual task you need to complete regarding the code, art, sound, and design in a hierarchical manner on a piece of paper helps to maintain a specific scope and keep you on track.', 'Implementing the gameplay loop with simple blocks and shapes can save a lot of hassle in spotting mistakes or missing information from your initial design.'],
         youtubeVideo: ''
