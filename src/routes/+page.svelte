@@ -5,12 +5,12 @@
     export let data;
 
 </script>
-<div class="flex flex-col h-screen">
-    <div class="flex flex-row h-3/5">
-        <div class="flex flex-col h-full ml-6">
+<div class="flex flex-col h-screen space-y-3 sm:space-y-0">
+    <div class="flex flex-col sm:flex-row sm:h-3/5">
+        <div class="flex flex-row h-fit space-x-3 sm:space-x-0 sm:flex-col sm:h-full ml-3 sm:ml-6 w-fit">
             <Socials></Socials>
         </div>
-        <div class="flex flex-col h-full w-11/12 pt-52 items-center justify-center">
+        <div class="flex flex-col h-full w-11/12 pt-10 pl-5 sm:pl-0 sm:pt-52 items-center justify-center">
             <div class="flex flex-col w-3/8 justify-center space-y-1">
                 <h1 class="text-3xl"> Hi, I'm</h1>
                 <h1 class="text-5xl font-semibold">{info.name}</h1>
@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    <div class="flex flex-col h-2/5">
+    <div class="flex flex-col h-2/5 pt-4 sm:pt-0">
         <Projects resumeData={data}></Projects>
     </div>
 </div>

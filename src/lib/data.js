@@ -5,7 +5,8 @@ export const info =
     about: 'More about me',
     resume: 'Resume',
     aboutThisSite: 'This web app was made using Svelte and ShadCN UI and hosted using Vercel.',
-    resumePath: '/assets/resume/Felix S Olesen - Resume.pdf'
+    resumePath: 'https://drive.google.com/file/d/1UwpTMMmrjB3PjF-cdnahAU-vC-7UnqNN/preview?usp=sharing'
+    // resumePath: '/assets/resume/Felix S Olesen - Resume.pdf'
 }
 
 export const aboutMe =
@@ -13,7 +14,7 @@ export const aboutMe =
     introduction: "Hi, I'm Felix",
     origin: "It all started for me back in 2013 when I learned to drag code blocks around with Scratch. Ever since then, I have had the privilege of working on an open-source education platform, publishing machine learning research and video games, and conducting QA testing for a globally-renowned broadcasting company.",
     background: "My current focus and trade is in making useful and inspiring software experiences that large audiences can enjoy in their everyday lives. It is my pleasure and joy to make web-apps, video games, and tools that improve the quality of life of the people in my community.",
-    hobbies: "When I'm not at the computer, I'm usually out on a run, hiking, crocheting a mega-blanket, or traversing the depths of Tartarus in Hades 2.",
+    hobbies: "When I'm not at the computer, I'm usually out on a run, hiking, crocheting a mega-blanket, or traversing the depths of Tartarus in Hades 2. Please feel free to reach out to me to talk about anything and everything creative",
     media: '/assets/aboutMe/aboutMeGraduate.webp'
 }
 

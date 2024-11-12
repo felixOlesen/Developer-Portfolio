@@ -4,7 +4,7 @@ import Button from "$lib/components/ui/button/button.svelte";
 import { onNavigate } from '$app/navigation';
 import {info} from '$lib/data.js';
 
-const resumeUrl = info.resumePath;
+$: resumeUrl = info.resumePath;
 
 onNavigate((navigation) => {
 if (!document.startViewTransition) return;
@@ -18,9 +18,9 @@ return new Promise((resolve) => {
 });
 </script>
 
-<div class="flex flex-row w-screen h-screen">
+<div class="flex flex-col sm:flex-row w-screen h-screen">
     <!-- Socials -->
-    <div class="flex flex-col h-full ml-6 ">
+    <div class="flex flex-row h-fit space-x-3 sm:space-x-0 sm:flex-col sm:h-full ml-6">
         <Button class="mt-4 rounded-xl bg-secondary shadow-xl hover:deepInnerShadow fill-white hover:fill-border" href="/">
             <svg height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 219.151 219.151" xml:space="preserve">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -37,7 +37,7 @@ return new Promise((resolve) => {
     <!-- About Me Component -->
      <div class="flex flex-col w-full h-full  items-center p-4 space-y-4">
         <div class="w-full h-full rounded-xl bg-primary p-4">
-            <iframe src={resumeUrl} title="resume" width="100%" height="100%"></iframe>
+            <embed src={resumeUrl} title="resume" width="100%" height="100%">            
         </div>
      </div>
 </div>

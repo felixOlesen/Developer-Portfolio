@@ -36,7 +36,7 @@
 
 {#each cardList as project}
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<div class="transition ease-in-out min-w-96 max-w-96 scale-90 max-h-52 hover:scale-100" on:mouseenter={() => handleHoverEnter(project)} on:mouseleave={handleHoverLeave} out:fade>
+<div class="transition ease-in-out min-w-96 max-w-96 scale-90 min-h-52 sm:max-h-52 hover:scale-100" on:mouseenter={() => handleHoverEnter(project)} on:mouseleave={handleHoverLeave} out:fade>
     <a href="/{project.role}">
         <div class="flex flex-col h-full w-full p-3 space-y-2 rounded-xl bg-primary scroller justify-center items-center transition-all ease-in-out hover:justify-start deepInnerShadow">
             

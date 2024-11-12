@@ -20,13 +20,13 @@
   
 </script>
 
-<div class="flex flex-row w-full h-1/5 pl-7">
+<div class="flex flex-row w-full h-1/5 pl-3 sm:pl-7">
   <ToggleGroup.Root size="default" type="single" variant="default" onValueChange={(value) => handleToggle(value)}>
       <ToggleGroup.Item value="workExperience" class="rounded-xl bg-secondary shadow-xl hover:deepInnerShadow">Work Experience</ToggleGroup.Item>
       <ToggleGroup.Item value="projects" class="rounded-xl bg-secondary shadow-xl hover:deepInnerShadow">Projects</ToggleGroup.Item>
   </ToggleGroup.Root>
 </div>
-<div class="flex flex-row w-screen h-4/5 overflow-x-scroll space-x-1 mb-8 px-6">
+<div class="flex flex-col sm:flex-row w-screen sm:h-4/5 sm:overflow-x-scroll px-0 space-x-1 mb-8 sm:px-6">
   <ResumeCards cardList={displayableCards}></ResumeCards>
 </div>
 
