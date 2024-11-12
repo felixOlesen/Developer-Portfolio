@@ -21,9 +21,9 @@ return new Promise((resolve) => {
 });
 </script>
 
-<div class="flex flex-col sm:flex-row w-screen h-screen sm:space-y-0">
+<div class="sm:flex grid grid-cols-1 sm:flex-row w-screen h-screen sm:space-y-0 ">
     <!-- Socials -->
-    <div class="flex flex-row h-fit space-x-3 sm:space-x-0 sm:flex-col sm:h-full ml-6">
+    <div class="flex flex-row h-fit space-x-3 sm:space-x-0 sm:flex-col sm:h-full ml-6 ">
         <Button class="mt-4 rounded-xl bg-secondary shadow-xl hover:deepInnerShadow fill-white hover:fill-border" href="/">
             <svg height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 219.151 219.151" xml:space="preserve">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -38,9 +38,9 @@ return new Promise((resolve) => {
         <Socials></Socials>
     </div>
     <!-- About Me Component -->
-     <div class="flex flex-col w-full h-full items-center pt-32 sm:pt-4 p-4 space-y-4">
+     <div class="flex flex-col w-full h-full items-center mt-2 p-4 space-y-4 sm:mt-0">
         
-        <div class="flex flex-col sm:flex-row w-full h-full space-x-4 space-y-4 items-center justify-center sm:space-y-0">
+        <div class="flex flex-col sm:flex-row w-full h-full space-x-4 space-y-4 items-center justify-center sm:space-y-0 ">
             <!-- International Background -->
             <div class="flex w-fit h-fit p-4 bg-primary rounded-xl deepInnerShadow">
                 <img class="max-h-[350px]" src={gradPhotoUrl} alt="graduateMedia">
