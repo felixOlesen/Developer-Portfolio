@@ -21,7 +21,7 @@ return new Promise((resolve) => {
 });
 </script>
 
-<div class="flex flex-col sm:flex-row w-screen h-screen space-y-14 sm:space-y-0">
+<div class="flex flex-col sm:flex-row w-screen h-screen sm:space-y-0">
     <!-- Socials -->
     <div class="flex flex-row h-fit space-x-3 sm:space-x-0 sm:flex-col sm:h-full ml-6">
         <Button class="mt-4 rounded-xl bg-secondary shadow-xl hover:deepInnerShadow fill-white hover:fill-border" href="/">
@@ -38,7 +38,7 @@ return new Promise((resolve) => {
         <Socials></Socials>
     </div>
     <!-- About Me Component -->
-     <div class="flex flex-col w-full h-full items-center  sm:pt-4 p-4 space-y-4">
+     <div class="flex flex-col w-full h-full items-center pt-32 sm:pt-4 p-4 space-y-4">
         
         <div class="flex flex-col sm:flex-row w-full h-full space-x-4 space-y-4 items-center justify-center sm:space-y-0">
             <!-- International Background -->
