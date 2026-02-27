@@ -1,47 +1,59 @@
-<script lang="ts">
+<script lang="ts" module>
+	import { getContext, setContext } from "svelte";
 	import type { VariantProps } from "tailwind-variants";
-	import { ToggleGroup as ToggleGroupPrimitive } from "bits-ui";
-	import { setToggleGroupCtx } from "./index.js";
-	import type { toggleVariants } from "$lib/components/ui/toggle/index.js";
-	import { cn } from "$lib/utils.js";
+	import { toggleVariants } from "$lib/components/ui/toggle/index.js";
 
-	type T = $$Generic<"single" | "multiple">;
-	type $$Props = ToggleGroupPrimitive.Props<T> & VariantProps<typeof toggleVariants>;
+	type ToggleVariants = VariantProps<typeof toggleVariants>;
 
-	
-	interface Props {
-		class?: string | undefined | null;
-		variant?: $$Props["variant"];
-		size?: $$Props["size"];
-		value?: $$Props["value"];
-		children?: import('svelte').Snippet<[any]>;
-		[key: string]: any
+	interface ToggleGroupContext extends ToggleVariants {
+		spacing?: number;
 	}
 
+	export function setToggleGroupCtx(props: ToggleGroupContext) {
+		setContext("toggleGroup", props);
+	}
+
+	export function getToggleGroupCtx() {
+		return getContext<Required<ToggleGroupContext>>("toggleGroup");
+	}
+</script>
+
+<script lang="ts">
+	import { ToggleGroup as ToggleGroupPrimitive } from "bits-ui";
+	import { cn } from "$lib/utils.js";
+
 	let {
-		class: className = undefined,
-		variant = "default",
+		ref = $bindable(null),
+		value = $bindable(),
+		class: className,
 		size = "default",
-		value = $bindable(undefined),
-		children,
-		...rest
-	}: Props = $props();
+		spacing = 0,
+		variant = "default",
+		...restProps
+	}: ToggleGroupPrimitive.RootProps & ToggleVariants & { spacing?: number } = $props();
 
 	setToggleGroupCtx({
 		get variant() { return variant; },
 		get size() { return size; },
+		get spacing() { return spacing; },
 	});
-
-	const children_render = $derived(children);
 </script>
 
+<!--
+Discriminated Unions + Destructing (required for bindable) do not
+get along, so we shut typescript up by casting `value` to `never`.
+-->
 <ToggleGroupPrimitive.Root
-	class={cn("flex items-center justify-center gao-1", className)}
-	bind:value
-	{...rest}
-	
->
-	{#snippet children({ builder })}
-		{@render children_render?.({ builder, })}
-	{/snippet}
-</ToggleGroupPrimitive.Root>
+	bind:value={value as never}
+	bind:ref
+	data-slot="toggle-group"
+	data-variant={variant}
+	data-size={size}
+	data-spacing={spacing}
+	style={`--gap: ${spacing}`}
+	class={cn(
+		"group/toggle-group flex w-fit items-center gap-[--spacing(var(--gap))] rounded-md data-[spacing=default]:data-[variant=outline]:shadow-xs",
+		className
+	)}
+	{...restProps}
+/>
