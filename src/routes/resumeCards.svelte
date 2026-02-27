@@ -15,7 +15,7 @@
     });
     
     let hovering: boolean = $state(false);
-    let currentProject: any = $state(null);
+    let currentProject: any = $state.raw(null);
     
     let { cardList } = $props();
 
