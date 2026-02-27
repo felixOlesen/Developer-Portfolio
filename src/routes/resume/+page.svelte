@@ -4,7 +4,7 @@ import Button from "$lib/components/ui/button/button.svelte";
 import { onNavigate } from '$app/navigation';
 import {info} from '$lib/data.js';
 
-$: resumeUrl = info.resumePath;
+let resumeUrl = $derived(info.resumePath);
 
 onNavigate((navigation) => {
 if (!document.startViewTransition) return;

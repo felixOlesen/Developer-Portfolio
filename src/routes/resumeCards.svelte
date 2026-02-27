@@ -14,10 +14,10 @@
 	    });
     });
     
-    let hovering: boolean = false;
-    let currentProject: any = null;
+    let hovering: boolean = $state(false);
+    let currentProject: any = $state.raw(null);
     
-    export let cardList;
+    let { cardList } = $props();
 
 
     function handleHoverEnter(project:any) {
@@ -35,8 +35,8 @@
 </script>
 
 {#each cardList as project}
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-<div class="transition ease-in-out min-w-96 max-w-96 scale-90 min-h-52 sm:max-h-52 hover:scale-100" on:mouseenter={() => handleHoverEnter(project)} on:mouseleave={handleHoverLeave} out:fade>
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<div class="transition ease-in-out min-w-96 max-w-96 scale-90 min-h-52 sm:max-h-52 hover:scale-100" onmouseenter={() => handleHoverEnter(project)} onmouseleave={handleHoverLeave} out:fade>
     <a href="/{project.role}">
         <div class="flex flex-col h-full w-full p-3 space-y-2 rounded-xl bg-primary scroller justify-center items-center transition-all ease-in-out hover:justify-start deepInnerShadow">
             
