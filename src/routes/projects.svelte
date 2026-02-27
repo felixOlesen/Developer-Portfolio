@@ -1,9 +1,13 @@
 <script lang="ts">
   import * as ToggleGroup from "$lib/components/ui/toggle-group";
   import ResumeCards from "./resumeCards.svelte";
-  export let resumeData:any;
+  interface Props {
+    resumeData: any;
+  }
 
-  let displayableCards = resumeData.experience.concat(resumeData.projects);
+  let { resumeData }: Props = $props();
+
+  let displayableCards = $derived(resumeData.experience.concat(resumeData.projects));
 
   function handleToggle(toggleValue:any) {
     if(toggleValue == "workExperience") {
