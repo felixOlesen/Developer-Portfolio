@@ -6,16 +6,16 @@
   }
 
   let { resumeData }: Props = $props();
-
-  let displayableCards = $derived(resumeData.experience.concat(resumeData.projects));
+  let cardData = $derived(resumeData)
+  let displayableCards = cardData.experience.concat(cardData.projects);
 
   function handleToggle(toggleValue:any) {
     if(toggleValue == "workExperience") {
-      displayableCards = resumeData.experience;
+      displayableCards = cardData.experience;
     } else if(toggleValue == "projects") {
-      displayableCards = resumeData.projects;
+      displayableCards = cardData.projects;
     } else {
-      displayableCards = resumeData.experience.concat(resumeData.projects);
+      displayableCards = cardData.experience.concat(cardData.projects);
     }
   }
 
