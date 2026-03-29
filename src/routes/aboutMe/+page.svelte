@@ -1,28 +1,25 @@
 <script lang="ts">
-import Socials from "../socials.svelte";
-import Button from "$lib/components/ui/button/button.svelte";
-import { onNavigate } from "$app/navigation";
-import { aboutMe } from "$lib/data.js";
+    import Socials from "../socials.svelte";
+    import Button from "$lib/components/ui/button/button.svelte";
+    import { onNavigate } from "$app/navigation";
+    import { aboutMe } from "$lib/data.js";
 
-const gradPhotoUrl: string = aboutMe.media;
+    // Removed the ': string' type because this is now an enhanced image object!
+    const gradPhotoUrl = aboutMe.media;
 
+    onNavigate((navigation) => {
+        if (!document.startViewTransition) return;
 
-
-
-onNavigate((navigation) => {
-if (!document.startViewTransition) return;
-
-return new Promise((resolve) => {
-        document.startViewTransition(async () => {
-            resolve();
-            await navigation.complete;
+        return new Promise((resolve) => {
+            document.startViewTransition(async () => {
+                resolve();
+                await navigation.complete;
+            });
         });
     });
-});
 </script>
 
 <div class="sm:flex grid grid-cols-1 sm:flex-row w-screen h-screen sm:space-y-0 ">
-    <!-- Socials -->
     <div class="flex flex-row h-fit space-x-3 sm:space-x-0 sm:flex-col sm:h-full ml-6 ">
         <Button class="mt-4 rounded-xl bg-secondary shadow-xl hover:deepInnerShadow fill-white hover:fill-border" href="/">
             <svg height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 219.151 219.151" xml:space="preserve">
@@ -37,24 +34,19 @@ return new Promise((resolve) => {
         </Button>
         <Socials></Socials>
     </div>
-    <!-- About Me Component -->
-     <div class="flex flex-col w-full h-full items-center mt-2 p-4 space-y-4 sm:mt-0">
+    
+    <div class="flex flex-col w-full h-full items-center mt-2 p-4 space-y-4 sm:mt-0">
         
         <div class="flex flex-col sm:flex-row w-full h-full space-x-4 space-y-4 items-center justify-center sm:space-y-0 ">
-            <!-- International Background -->
             <div class="flex w-fit h-fit p-4 bg-primary rounded-xl deepInnerShadow">
-                <img class="max-h-[350px]" src={gradPhotoUrl} alt="graduateMedia">
-            </div>
-            <!-- Aspirations -->
+                <enhanced:img class="max-h-[350px] w-auto object-cover rounded-md" src={gradPhotoUrl} alt="graduateMedia" />
+            </div>            
             <div class="flex flex-col w-fit sm:max-w-[600px] h-fit sm:max-h-[382px] p-4 bg-primary rounded-xl deepInnerShadow space-y-3">
                 <h1 class="text-lg font-semibold">Hi, I'm Felix!</h1>
                 <p class="text-md ml-1 font-light">{aboutMe.origin}</p>
                 <p class="text-md ml-1 font-light">{aboutMe.background}</p>
                 <p class="text-md ml-1 font-light">{aboutMe.hobbies}</p>
-
             </div>
         </div>
-
      </div>
 </div>
-
