@@ -53,7 +53,7 @@ export const info = {
     about: 'More about me',
     resume: 'Resume',
     aboutThisSite: 'This web app was made using Svelte and ShadCN UI and hosted using Vercel.',
-    resumePath: 'https://drive.google.com/file/d/1UwpTMMmrjB3PjF-cdnahAU-vC-7UnqNN/preview?usp=sharing'
+    resumePath: 'https://drive.google.com/file/d/1Ipm1kghweFFN1EgutpywPNjm11DpjNmS/preview?usp=sharing'
 }
 
 export const aboutMe = {
@@ -65,6 +65,22 @@ export const aboutMe = {
 }
 
 export const experience = [
+    {
+        role: 'Software Developer - Education Evolved',
+        duration: 'Apr 2025 - Oct 2025',
+        projectOrProfession: 'Work Experience',
+        description: 'Startup building immersive educational experiences commissioned by universities and museums. Worked on and shipped three different Unity projects (HELM, CEASEFIRE, and Living Bayeux Tapestry).',
+        tags: ['C#', 'Unity', 'AWS', 'WebGL', 'OOP', 'JavaScript'],
+        filterable: 'softwareDev',
+        overviewDescription: ['Developed interactive digital exhibits and educational games using Unity, C#, and React, taking products from concept to shipped release.', 'Shipped HELM, a multiplayer WebGL escape-room game that trains container-ship crews on key aspects of their roles.', 'Built CEASEFIRE, a dialogue-driven negotiation game teaching young peacemakers the fundamentals of brokering real-world ceasefires.', 'Created an interactive Bayeux Tapestry exhibit, letting users scroll the tapestry and explore individual elements to learn what each depicts.'],
+        overviewMedia: [], // Replaced strings with imported variables
+        githubLink: '',
+        alternateLink: 'https://www.educationevolvedltd.com',
+        overviewDuration: 'April 2025 - October 2025',
+        technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webgpu/webgpu-plain-wordmark.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg'],
+        overviewLessons: ['Implementing a these experiences required learning AWS and multi-layered thinking and understanding of networking and serialisation in C#', 'Refactoring and documentation allows for all-around better code and all-round better quality of life for your fellow developers.'],
+        youtubeVideo: ''
+    },
     {
         role: 'Software Developer - ICHK',
         duration: 'Dec 2023 - Feb 2024',
@@ -101,11 +117,27 @@ export const experience = [
 
 export const projects = [
     {
+        role: 'ML AKI Detection System',
+        duration: 'Jan 2026 - Mar 2026',
+        projectOrProfession: 'Machine Learning Project',
+        description: 'Implemented an Acute Kidney Injury detector using from-scratch trained models receiving real historical medical data.',
+        tags: ['CI/CD', 'Git', 'Python', 'Docker', 'Grafana', 'Kubernetes'],
+        filterable: 'softDev',
+        overviewDescription: ['Started off by training a Machine Learning model on noisy health data used for predicting Acute Kidney Injury.', 'Then implemented a harness around the model in Python for parsing different types of messages being sent over a hospital messaging protocol.', 'The model and harness were all containerised in a docker container and tested against unseen data in a live environment.','After containerisation, a kubernetes cluster was set up to host the container via Microsoft Azure.', 'After all of this setup, a grafana dashboard along with alerting was set up to monitor any outages due to errors or unhandled exceptions from purposefully poorly constructed messages or overhwelming workloads.'],
+        overviewMedia: [],
+        githubLink: '',
+        alternateLink: '',
+        overviewDuration: 'January 2026 - March 2026',
+        technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg'],
+        overviewLessons: ['Timing the full process of receiving a message and processing it until you get an output from the model is very important for establishing the scalability of your application.', "Meaningfully splitting up work and therefore your app architecture into separable modules creates a loosely coupled and more editable system.", "Acceptance testing is critical for catching missed bugs or breaking changes not accounted for in the software, especially with an increasingly complex codebase."],
+        youtubeVideo: ''
+    },
+    {
         role: 'Portfolio Website',
         duration: 'Sept - Present 2024',
         projectOrProfession: 'Web Dev Project',
         description: 'Designed and developed the very website you are looking at right now! I first created a mock=up of the website in Figma before implementing it using Svelte, ShadCN UI, and Tailwind CSS.',
-        tags: ['JavaScript', 'TypeScript', 'Github', 'Svelte', 'Figma', 'Tailwind', 'Vercel'],
+        tags: ['JavaScript', 'TypeScript', 'Git', 'Svelte', 'Figma', 'Tailwind', 'Vercel'],
         filterable: 'softDev',
         overviewDescription: ['I created a portfolio website to be able to display my projects and experience in a more engaging way than simply sending over a github repo. I also used this as a chance to learn the Svelte web-framework and TypeScript for the first time.', 'I started by designing a mockup of the different website views in Figma, which I then implemented using the Svelte component-based system as well as Tailwind CSS combine with ShadCN/UI components.', 'Once I filled out the information and designed each layout, I implemented Svelte animations and Tailwind transitions to make the site more interactive. After completing the portfolio, I deployed the app using Vercel for your viewing pleasure!'],
         overviewMedia: [portfolioHomePage, portfolioProjectPage, portfolioFigmaMockup],
