@@ -1,11 +1,16 @@
 <script lang="ts">
     import { info } from '$lib/data.js';
-    import Projects from "./projects.svelte";
-    import Socials from "./socials.svelte";
-  let { data } = $props();
+  import MainSplash from './main_splash.svelte';
+  import ProjectsWork from './projects_work.svelte';
+    let { data } = $props();
 
 </script>
-<div class="flex flex-col h-screen space-y-3 sm:space-y-0">
+<div class="flex flex-col h-screen border-2 bg-[#F6F2EB]">
+    <!-- main -->
+     <MainSplash />
+     <ProjectsWork />
+</div>
+<!-- <div class="flex flex-col h-screen space-y-3 sm:space-y-0">
     <div class="flex flex-col sm:flex-row sm:h-3/5">
         <div class="flex flex-row h-fit space-x-3 sm:space-x-0 sm:flex-col sm:h-full ml-3 sm:ml-6 w-fit">
             <Socials></Socials>
@@ -33,7 +38,7 @@
     <div class="flex flex-col h-2/5 pt-4 sm:pt-0">
         <Projects resumeData={data}></Projects>
     </div>
-</div>
+</div> -->
 
 
 
