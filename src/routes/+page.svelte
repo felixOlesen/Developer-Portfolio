@@ -1,15 +1,15 @@
 <script lang="ts">
-    import { info } from '$lib/data.js';
-  import MainSplash from './main_splash.svelte';
-  import ProjectsWork from './projects_work.svelte';
+    import MainSplash from './main_splash.svelte';
+    import ProjectsWork from './projects_work.svelte';
     let { data } = $props();
 
 </script>
-<div class="flex flex-col border-2 bg-[#F6F2EB] gap-3">
+<div class="flex flex-col bg-[#F6F2EB] gap-3">
     <!-- main -->
-     <MainSplash />
-     <ProjectsWork />
+    <MainSplash />
+    <ProjectsWork resumeData={data}/>
 </div>
+
 <!-- <div class="flex flex-col h-screen space-y-3 sm:space-y-0">
     <div class="flex flex-col sm:flex-row sm:h-3/5">
         <div class="flex flex-row h-fit space-x-3 sm:space-x-0 sm:flex-col sm:h-full ml-3 sm:ml-6 w-fit">

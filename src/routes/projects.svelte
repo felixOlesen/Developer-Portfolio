@@ -1,6 +1,6 @@
 <script lang="ts">
   import * as ToggleGroup from "$lib/components/ui/toggle-group";
-  import ResumeCards from "./resumeCards.svelte";
+  import ResumeCards from "./resumeCard.svelte";
   interface Props {
     resumeData: any;
   }
@@ -31,7 +31,6 @@
   </ToggleGroup.Root>
 </div>
 <div class="flex flex-col sm:flex-row w-screen sm:h-4/5 sm:overflow-x-scroll px-0 space-x-1 mb-8 sm:px-6">
-  <ResumeCards cardList={displayableCards}></ResumeCards>
 </div>
 
 <style>

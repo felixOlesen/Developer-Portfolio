@@ -10,6 +10,6 @@
   let { children }: Props = $props();
 </script>
 
-<HeaderNav/>
+<HeaderNav />
 <main>{@render children?.()}</main>
 <FooterContent />
