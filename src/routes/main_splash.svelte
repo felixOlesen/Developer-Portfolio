@@ -7,7 +7,6 @@
     import ArrowRightIcon from "@lucide/svelte/icons/arrow-right";
     import MinusIcon from "@lucide/svelte/icons/minus";
 
-
     // Track the loading state
     let loaded = $state(false);
 </script>
@@ -28,7 +27,7 @@
             <div class="absolute inset-0 z-0">
                 <enhanced:img 
                     src={aboutMeTinyImage} 
-                    alt="Placeholder"
+                    alt="Felix Sylvest Olesen Blur"
                     class="w-full h-full object-cover blur-xl scale-110"
                 />
             </div>
@@ -40,7 +39,7 @@
             >
                 <enhanced:img 
                     src={aboutMeFullImage} 
-                    alt="Profile Image"
+                    alt="Felix Sylvest Olesen"
                     onload={() => loaded = true}
                     class="w-full h-full object-cover"
                 />
@@ -67,8 +66,9 @@
         </div>
     </div>
 </div>
+<div class="w-full md:w-7/8 h-3 border-b-1 border-gray-500 self-center mt-15"></div>
 
-<div class="flex flex-row place-content-center mt-10">
+<!-- <div class="flex flex-row place-content-center mt-10">
     <div class="flex flex-row w-full md:w-7/8 border-t-1 border-b-1 border-gray-500 py-6 place-content-center overflow-hidden gap-4">
         <p class="text-black">Sliding Skills</p>
         <p class="text-black">·</p>
@@ -96,4 +96,4 @@
         <p class="text-black">·</p>
         <p class="text-black">Sliding Skills</p>
     </div>
-</div>
+</div> -->

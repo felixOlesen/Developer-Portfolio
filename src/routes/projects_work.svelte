@@ -28,7 +28,7 @@
     }
 </script>
 
-<div class="flex flex-col items-center gap-14 px-2 mt-10 md:mt-20">
+<div class="flex flex-col items-center gap-14 px-2 mt-10 md:mt-20 mb-20">
     <div class="flex flex-row w-full md:w-7/8">
         <p class="text-black text-3xl md:text-5xl">Selected Work and Projects</p>
     </div>

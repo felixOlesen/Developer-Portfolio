@@ -9,12 +9,12 @@
         <p class="text-sm text-gray-600 font-extralight">- Software Engineer</p>
     </div>
     <div class="flex w-full h-full place-content-start md:place-content-end border-gray-400 border-b-1 md:border-0 md:w-7/16 md:h-full items-center overflow-x-scroll md:overflow-x-hidden">
-        <Button class="text-gray-600 font-light" size="sm" variant="ghost">Work</Button>
-        <Button class="text-gray-600 font-light" size="sm" variant="ghost">About</Button>
-        <Button class="text-gray-600 font-light" size="sm" variant="ghost">Resume</Button>
+        <Button href="/" class="text-gray-600 font-light" size="sm" variant="ghost">Work</Button>
+        <Button href="/aboutMe" class="text-gray-600 font-light" size="sm" variant="ghost">About</Button>
+        <Button href="/resume" class="text-gray-600 font-light" size="sm" variant="ghost">Resume</Button>
         <span class="inline-block align-top font-thin text-gray-400 text-xl pb-1">|</span>
-        <Button class="text-gray-600 font-light" size="sm" variant="ghost">GitHub</Button>
-        <Button class="text-gray-600 font-light" size="sm" variant="ghost">LinkedIn</Button>
-        <Button class="text-gray-600 font-light" size="sm" variant="ghost">itch.io</Button>
+        <Button href="https://github.com/felixOlesen" class="text-gray-600 font-light" size="sm" variant="ghost">GitHub</Button>
+        <Button href="https://www.linkedin.com/in/felix-sylvest-olesen/" class="text-gray-600 font-light" size="sm" variant="ghost">LinkedIn</Button>
+        <Button href="https://atomicblitz.itch.io" class="text-gray-600 font-light" size="sm" variant="ghost">itch.io</Button>
     </div>
 </div>
