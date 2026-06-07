@@ -5,7 +5,7 @@
     let { data } = $props();
 
 </script>
-<div class="flex flex-col h-screen border-2 bg-[#F6F2EB]">
+<div class="flex flex-col border-2 bg-[#F6F2EB] gap-3">
     <!-- main -->
      <MainSplash />
      <ProjectsWork />

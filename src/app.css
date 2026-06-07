@@ -60,7 +60,7 @@
 /* 5. Your shadcn Color Variables */
 @layer base {
   :root {
-    --background: 0 1% 26%;
+    --background: 38%, 38%, 94%;
     --foreground: 0 0% 100%;
 
     --muted: 0 0% 19%;
