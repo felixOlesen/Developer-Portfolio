@@ -11,18 +11,18 @@
         <p class="text-black font-extralight">GET IN TOUCH</p>
     </div>
 
-    <div class="flex flex-col md:flex-row md:items-end">
+    <div class="flex flex-col lg:flex-row lg:items-end">
         <div class="w-1/4">
             <p class="text-black text-6xl font-bold">Let's Build Something</p>
         </div>
-        <div class="flex flex-row w-3/4 items-end">
-            <MinusIcon class="text-black size-16 pt-4"/>
-            <a href="mailto:felixolesen@gmail.com" class="text-black text-6xl">say hello</a>
-            <MoveUpRight class="text-black size-24"/>
+        <div class="flex flex-row w-3/4 items-end pl-0 lg:pl-14">
+            <MinusIcon class="text-[#B45F38] size-16 pt-4"/>
+            <a href="mailto:felixolesen@gmail.com" class="text-[#B45F38] text-6xl">say hello</a>
+            <MoveUpRight class="text-[#B45F38] size-24"/>
         </div>
     </div>
     
-    <div class="flex flex-col md:flex-row md:place-content-between gap-8">
+    <div class="flex flex-col md:flex-row md:place-content-between gap-8 overflow-x-scroll md:overflow-x-hidden">
         <div class="flex flex-row">
             <Button class="bg-[#F6F2EB] text-gray-600 font-light" size="sm" variant="ghost">GitHub</Button>
             <Button class="bg-[#F6F2EB] text-gray-600 font-light" size="sm" variant="ghost">LinkedIn</Button>

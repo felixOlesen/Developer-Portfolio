@@ -19,7 +19,6 @@
     
     let { project, projectNumber } = $props();
 
-
     function handleHoverEnter(project:any) {
         // console.log("Entering!");
         hovering = true;
@@ -37,24 +36,24 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 
 <div class="flex flex-col border-1 border-gray-400 p-4 rounded-xl bg-[#ECE5DB] overflow-hidden">
-    <a href="/{project.role}" class="flex flex-col gap-10">
+    <a href="/{project.role}" class="flex flex-col gap-6">
         <div class="flex flex-row  w-full place-content-between">
             <p class="text-gray-600 text-md font-extralight place-content-center">{projectNumber}</p>
             <p class="text-gray-600 border-1 rounded-full py-1 px-2 font-light">{project.projectOrProfession}</p>
         </div>
-        <div class="flex flex-row flex-wrap border-1 border-gray-500 rounded-xl place-self-center overflow-hidden place-content-center w-[300px] md:w-[325px] h-[168px] md:h-[183px] ">
             {#if project.overviewMedia.length > 0}
-                <enhanced:img class="object-fill" src={project.overviewMedia[0]} alt="overviewMedia" loading="lazy"/>
+                <div class="flex flex-row flex-wrap border-1 border-gray-500 bg-[#857969] rounded-xl place-self-center overflow-hidden place-content-center w-[325px] lg:w-[375px] h-[225px] ">
+                    <enhanced:img class="object-fill" src={project.overviewMedia[0]} alt="overviewMedia" loading="lazy"/>                
+                </div>
             {/if}
-        </div>
         <div class="flex flex-row  w-full">
             <p  class="text-black font-bold text-xl">{project.role}</p>
         </div>
         <div class="flex flex-row w-full">
             <p  class="text-sm font-light text-gray-600">{project.duration}</p>
         </div>
-        <div class="flex flex-row  w-full flex-wrap gap-3">
-            {#each project.tags as skill}
+        <div class="flex flex-row  w-full flex-wrap gap-2">
+            {#each project.skills as skill}
                 <div class="border-1 rounded-full py-1 px-2 bg-[#f5f0e6]"><p class="text-gray-600 font-extralight text-sm">{skill}</p></div>
             {/each}
         </div>

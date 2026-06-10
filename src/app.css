@@ -60,20 +60,20 @@
 /* 5. Your shadcn Color Variables */
 @layer base {
   :root {
-    --background: 38%, 38%, 94%;
+    --background: 38, 38%, 94%;
     --foreground: 0 0% 100%;
 
     --muted: 0 0% 19%;
-    --muted-foreground: 102 50% 39%;
+    --muted-foreground: 0 0% 100%;
 
-    --popover: 215 9% 36%;
-    --popover-foreground: 213 100% 98%;
+    --popover: 18.87 52.54% 46.27%;
+    --popover-foreground: 18.87 52.54% 46.27%;
 
     --card: 0 0% 19%;
     --card-foreground: 0 0% 100%;
 
-    --border: 102 50% 39%;
-    --input: 118 30% 39%;
+    --border: 0 0% 70%;
+    --input: 0 0% 19%;
 
     --primary: 0 0% 19%;
     --primary-foreground: 0 0% 100%;
@@ -81,7 +81,7 @@
     --secondary: 0 0% 33%;
     --secondary-foreground: 0 0% 100%;
 
-    --accent: 118 30% 39%;
+    --accent: 18.87 52.54% 46.27%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72.2% 50.6%;

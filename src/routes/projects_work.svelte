@@ -38,10 +38,10 @@
             type="single" 
             value={filter} 
             onValueChange={handleToggle}>
-            <ToggleGroup.Item value="workExperience" class="rounded-xl border-1 border-gray-500 text-gray-600">
+            <ToggleGroup.Item value="workExperience" class="rounded-xl border-b-1 border-t-1 border-l-1 text-gray-600">
                 Work Experience
             </ToggleGroup.Item>
-            <ToggleGroup.Item value="projects" class="rounded-xl border-1 border-gray-500 text-gray-600">
+            <ToggleGroup.Item value="projects" class="rounded-xl border-b-1 border-t-1 border-r-1 text-gray-600">
                 Projects
             </ToggleGroup.Item>
         </ToggleGroup.Root>
@@ -49,7 +49,7 @@
     </div>
 
     <div class="flex flex-col items-center w-full md:w-7/8">
-        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 w-full p-4">
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full p-4">
             {#each visibleCards as project, i}
                 <ResumeCard project={project} projectNumber={i+1} />
             {/each}
