@@ -67,7 +67,8 @@ export const aboutMe = {
 
 export const experience = [
     {
-        role: 'Software Developer - Education Evolved',
+        role: 'Software Developer',
+        orgOrEvent: 'Education Evolved',
         duration: 'Apr 2025 - Oct 2025',
         projectOrProfession: 'Work Experience',
         description: 'Startup building immersive educational experiences commissioned by universities and museums. Worked on and shipped three different Unity projects (HELM, CEASEFIRE, and Living Bayeux Tapestry).',
@@ -84,7 +85,8 @@ export const experience = [
         youtubeVideo: ''
     },
     {
-        role: 'Software Developer - ICHK',
+        role: 'Software Developer',
+        orgOrEvent: 'ICHK',
         duration: 'Dec 2023 - Feb 2024',
         projectOrProfession: 'Work Experience',
         description: 'Worked for a secondary school in Hong Kong on their open-source education platform "Gibbon". Refactored and re-designed features to adhere to DRY coding principles.',
@@ -101,7 +103,8 @@ export const experience = [
         youtubeVideo: ''
     },
     {
-        role: 'Associate Test Engineer - Sky',
+        role: 'Associate Test Engineer',
+        orgOrEvent: 'Sky',
         duration: 'Jun 2021 - Jul 2022',
         projectOrProfession: 'Work Experience',
         description: 'Conducted manual E2E testing on the SkyQ set-top-boxes. Automated my test cases with an in-house Python testing framework. Developed a testing tool for Sky to replace an archaic with a new full-stack web-application.',
@@ -122,6 +125,7 @@ export const experience = [
 export const projects = [
     {
         role: 'ML AKI Detection System',
+        orgOrEvent: '',
         duration: 'Jan 2026 - Mar 2026',
         projectOrProfession: 'Machine Learning Project',
         description: 'Implemented an Acute Kidney Injury detector using from-scratch trained models receiving real historical medical data.',
@@ -139,6 +143,7 @@ export const projects = [
     },
     {
         role: 'Portfolio Website',
+        orgOrEvent: '',
         duration: 'Sept - Present 2024',
         projectOrProfession: 'Web Dev Project',
         description: 'Designed and developed the very website you are looking at right now! I first created a mock=up of the website in Figma before implementing it using Svelte, ShadCN UI, and Tailwind CSS.',
@@ -156,6 +161,7 @@ export const projects = [
     },
     {
         role: 'Aquetect',
+        orgOrEvent: 'PixelJam',
         duration: 'Apr - Present 2024',
         projectOrProfession: 'Game Dev Project',
         description: 'Designed, developed, and published a 2D top-down isometric tycoon game with Unity and C#. Featuring completely original assets made in Aseprite, and utilising modern design patterns.',
@@ -173,6 +179,7 @@ export const projects = [
     },
     {
         role: 'QUAD-RE',
+        orgOrEvent: '',
         duration: 'Mar - Present 2024',
         projectOrProfession: 'Game Dev Project',
         description: 'Designed, developed, and published a Endless runner game with Unity and C# inspired by Geometry Dash and Super Hexagon.',
@@ -190,6 +197,7 @@ export const projects = [
     },
     {
         role: 'Bugs TDF',
+        orgOrEvent: '',
         duration: 'Jul 2023 - Mar 2024',
         projectOrProfession: 'Game Dev Project',
         description: 'Designed, developed, and published a sci-fi tower defence game with Unity and C# with inspiration from the Bloons Tower Defence series. Fully published on itch.io for multiple platforms.',
@@ -207,6 +215,7 @@ export const projects = [
     },
     {
         role: 'AI Game Tester + Level Generator',
+        orgOrEvent: '',
         duration: 'Sept 2022 - Jun 2023',
         projectOrProfession: 'University Dissertation',
         description: 'Developed a game-testing AI and level-generating AI that train in unison and adversarially to each other.',
@@ -224,6 +233,7 @@ export const projects = [
     },
     {
         role: 'Skin Cancer Classifier',
+        orgOrEvent: '',
         duration: 'Jan - July 2023',
         projectOrProfession: 'University Project',
         description: 'Developed a top-down broad search for optimal ML methods of classifying the HAM10000 skin cancer dataset. Worked in team to approach this task from supervised and unsupervised ML points of view.',
@@ -241,6 +251,7 @@ export const projects = [
     },
     {
         role: 'Optimisation Algorithm Visualizer',
+        orgOrEvent: '',
         duration: 'Sept 2022 - Jun 2023',
         projectOrProfession: 'Software Project',
         description: 'A visualizer designed in python for seeing how optimisation algorithms traverse the decision space differently.',
@@ -258,6 +269,7 @@ export const projects = [
     },
     {
         role: 'Genetically Modified Wolf Optimser',
+        orgOrEvent: '',
         duration: 'Sept - Dec 2022',
         projectOrProfession: 'Published Research',
         description: 'Research into gradient-descent alternatives for weight and bias optimisation of a convolutional neural network applied to the CIFAR-10 dataset.',
@@ -275,6 +287,7 @@ export const projects = [
     },
     {
         role: 'Video Game Sale Data Analytics',
+        orgOrEvent: '',
         duration: 'Sept - Dec 2022',
         projectOrProfession: 'University Project',
         description: 'Business analytics project for finding the optimal type of video game to maximiase sales in different continents using R and web-scraping.',
@@ -292,6 +305,7 @@ export const projects = [
     },
     {
         role: 'Game Discussion Forum',
+        orgOrEvent: '',
         duration: 'Sept - Dec 2020',
         projectOrProfession: 'University Project',
         description: 'A web and database coursework project featruing RubyOnRails and SQL in an MVC monolith architecture. I created a discussion forum for video games utlising the GiantBombDB API.',
@@ -309,6 +323,7 @@ export const projects = [
     },
     {
         role: 'Butterfly Image Classifier',
+        orgOrEvent: '',
         duration: 'Sept - Dec 2020',
         projectOrProfession: 'Kaggle Competition',
         description: 'A university-based kaggle competition for developing an AI model that could classify seven different butterfly classes as accurately as possible.',

@@ -1,7 +1,7 @@
 <script lang="ts">
-    import Socials from "../socials.svelte";
     import Button from "$lib/components/ui/button/button.svelte";
     import { onNavigate } from '$app/navigation';
+    import MinusIcon from "@lucide/svelte/icons/minus";
 
 
     let { data } = $props();
@@ -22,7 +22,39 @@
 
 </script>
 
-<div class="flex flex-col sm:m-0 sm:flex-row w-screen h-screen">
+<div class="flex flex-col w-full md:w-13/16 border place-self-center gap-16 mt-20">
+    <div class="flex flex-row">
+        <MinusIcon class="text-[#B45F38]"/> <p class="text-[#B45F38]">About</p>
+    </div>
+    <div class="flex flex-row gap-8 items-center">
+        <p class="text-black text-8xl font-bold">{overview.role}</p>
+        <p class="px-2 py-1 border border-[#B45F38] rounded-full text-[#B45F38] place-self-end font-bold">{overview.projectOrProfession}</p>
+    </div>
+    <p class="text-2xl font-light w-5/8 text-gray-600">{overview.description}</p>
+    <div class="flex flex-row border rounded-xl w-full bg-[#EEE9E0]">
+        <div class="flex flex-col border-r-1 pl-8 py-6 gap-2 w-1/4">
+            <p class="text-black font-extralight text-sm">Timeframe</p>
+            <p class="text-black font-bold">{overview.duration}</p>
+        </div>
+        <div class="flex flex-col border-r-1 pl-8 py-6 gap-2 w-1/4">
+            <p class="text-black font-extralight text-sm">Timeframe</p>
+            <p class="text-black font-bold">7 Days</p>
+        </div>
+        <div class="flex flex-col border-r-1 pl-8 py-6 gap-2 w-1/4">
+            <p class="text-black font-extralight text-sm">Timeframe</p>
+            <p class="text-black font-bold">7 Days</p>
+        </div>
+        <div class="flex flex-col pl-8 py-6 gap-2 w-1/4">
+            <p class="text-black font-extralight text-sm">Outcome</p>
+            <p class="text-black font-bold">7 Days</p>
+        </div>
+    </div>
+    <div class="border w-full h-[500px] bg-[#857969] rounded-xl"></div>
+</div>
+    
+
+
+<!-- <div class="flex flex-col sm:m-0 sm:flex-row w-screen h-screen">
     
     <div class="flex flex-row h-fit space-x-3 sm:space-x-0 sm:flex-col sm:h-full ml-6">
         <Button class="mt-4 rounded-xl bg-secondary shadow-xl hover:deepInnerShadow fill-white hover:fill-border" href="/">
@@ -37,12 +69,10 @@
             </svg>
         </Button>
         <Socials></Socials>
-    </div>
-    <div class="flex flex-col sm:flex-row w-full justify-center p-3 sm:p-0">
-        <!-- Project Text -->
+    </div> -->
+    <!-- <div class="flex flex-col sm:flex-row w-full justify-center p-3 sm:p-0">
         <div class="flex flex-col w-full space-y-6 m-0 pt-3 sm:w-1/2 sm:m-4 sm:pt-0">
             <div class="flex flex-col rounded-xl bg-primary deepInnerShadow p-3">
-                <!-- Header -->
                 <div class="flex flex-row w-full">
                     <div class="flex flex-col w-1/2 p-1">
                         <div>
@@ -53,7 +83,6 @@
                         </div>
                     </div>
                     <div class="flex flex-row w-1/2 place-content-end pr-1 space-x-2">
-                        <!-- Github Link -->
                         {#if overview.githubLink !== ''}
                             <a href={overview.githubLink} aria-label="Visit the Github repo!">
                                 <svg class={hoverClass} width="35px" height="35px" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +91,6 @@
                             </a>
                         {/if}
 
-                        <!-- Alternate Link -->
                         {#if overview.alternateLink !== ''}
                             <a href={overview.alternateLink} aria-label="Check it out!">
                                 <svg class={hoverClass} width="35px" height="35px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -77,7 +105,6 @@
                         
                     </div>
                 </div>
-                <!-- Technologies Used -->
                 <div class="flex flex-col space-y-2 p-2">
                     <div class=""><h2 class="text-md font-extralight text-white/70">Technologies</h2></div>
                     <div class="flex flex=row flex-wrap space-x-3 p-3">
@@ -105,7 +132,6 @@
             </div>
         </div>
     
-        <!-- Project Media -->
        {#if overview.overviewMedia.length > 0 || overview.youtubeVideo !== ''}
             <div class="flex flex-col w-full sm:w-1/2 space-y-6 p-4 scroller items-center">
                 {#if overview.youtubeVideo !== ''}
@@ -127,4 +153,4 @@
             </div>
          {/if}
     </div>
-</div>
+</div> -->
