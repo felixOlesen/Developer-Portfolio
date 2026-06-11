@@ -2,6 +2,7 @@
     import Button from "$lib/components/ui/button/button.svelte";
     import { onNavigate } from '$app/navigation';
     import MinusIcon from "@lucide/svelte/icons/minus";
+    import MoveUpRight from "@lucide/svelte/icons/move-up-right";
 
 
     let { data } = $props();
@@ -23,8 +24,8 @@
 </script>
 
 <div class="flex flex-col w-full md:w-13/16 border place-self-center gap-16 mt-20">
-    <div class="flex flex-row">
-        <MinusIcon class="text-[#B45F38]"/> <p class="text-[#B45F38]">About</p>
+    <div class="flex flex-row items-center gap-1">
+        <MinusIcon class="text-[#B45F38] text-2xl"/> <p class="text-[#B45F38] text-2xl">Overview</p>
     </div>
     <div class="flex flex-row gap-8 items-center">
         <p class="text-black text-8xl font-bold">{overview.role}</p>
@@ -50,6 +51,118 @@
         </div>
     </div>
     <div class="border w-full h-[500px] bg-[#857969] rounded-xl"></div>
+    <div class="flex flex-row">
+        <div class="flex flex-col w-1/4 gap-8">
+            <div class="flex flex-col gap-3">
+                <p class="text-black text-sm font-extralight">Contents</p>
+                {#if overview.overviewDescription.length > 0}
+                    <div class="flex flex-row border-gray-400 border-b-1 p-2 gap-2">
+                        <p class="text-black text-sm font-extralight">01</p>
+                        <p class="text-black text-sm font-heavy">Overview</p>
+                    </div>
+                {/if}
+                
+                {#if overview.overviewBuildSummary.length > 0}
+                    <div class="flex flex-row border-gray-400 border-b-1 p-2 gap-2">
+                        <p class="text-black text-sm font-extralight">02</p>
+                        <p class="text-black text-sm font-heavy">What I Built</p>
+                    </div>
+                {/if}
+                
+                {#if overview.overviewLessons.length > 0}
+                    <div class="flex flex-row border-gray-400 border-b-1 p-2 gap-2">
+                        <p class="text-black text-sm font-extralight">03</p>
+                        <p class="text-black text-sm font-heavy">What I Learned</p>
+                    </div>
+                {/if}
+                
+                {#if overview.overviewMedia.length > 0}
+                    <div class="flex flex-row border-gray-400 border-b-1 p-2 gap-2">
+                        <p class="text-black text-sm font-extralight">04</p>
+                        <p class="text-black text-sm font-heavy">Gallery</p>
+                    </div>
+                {/if}
+                
+            </div>
+            <div class="flex flex-col gap-3">
+                <p class="text-black text-sm font-extralight">Built With</p>
+                <div class="flex flex-row flex-wrap gap-2">
+                    {#each overview.tags as technology}
+                        <p class="text-black text-xs font-light px-2 py-1 rounded-full border">{technology}</p>
+                        
+                    {/each}
+                </div>
+            </div>
+            <div class="flex flex-col gap-3">
+                {#if overview.githubLink != '' && overview.alternateLink != ''}
+                    <p class="text-black text-sm font-extralight">Links</p>
+                {/if}
+                {#if overview.githubLink != ''}
+                    <a href={overview.githubLink} class="flex flex-row border rounded-xl px-4 py-3 place-content-between items-center">
+                        <p class="text-black text-sm">See On Github</p> 
+                        <MoveUpRight class="text-black"/>
+                    </a>
+                {/if}
+                {#if overview.alternateLink != ''}
+                    <a href={overview.alternateLink} class="flex flex-row border rounded-xl px-4 py-3 place-content-between items-center">
+                        <p class="text-black text-sm">Related Site</p> 
+                        <MoveUpRight class="text-black"/>
+                    </a>
+                {/if}
+            </div>
+        </div>
+        <div class="flex flex-col w-full md:w-3/4 border p-4 gap-20">
+            {#if overview.overviewDescription.length > 0}
+                <div class="flex flex-col gap-8 w-3/4">
+                    <div class="flex flex-row gap-4 items-end">
+                        <p class="text-xs text-black font-extralight">01</p>
+                        <p class="text-4xl text-black font-bold">Overview</p>
+                    </div>
+                    {#each overview.overviewDescription as desc}
+                        <p class="text-black text-lg">{desc}</p>
+                    {/each}
+                </div>
+            {/if}
+            
+            {#if overview.overviewBuildSummary.length > 0}
+                <div class="flex flex-col gap-8 w-3/4">
+                    <div class="flex flex-row gap-4 items-end">
+                        <p class="text-xs text-black font-extralight">02</p>
+                        <p class="text-4xl text-black font-bold">What I learned</p>
+                    </div>
+                    {#each overview.overviewBuildSummary as desc}
+                        <p class="text-black text-lg">{desc}</p>
+                    {/each}
+                </div>
+                
+            {/if}
+            
+            {#if overview.overviewLessons.length > 0}
+                <div class="flex flex-col gap-8 w-3/4">
+                    <div class="flex flex-row gap-4 items-end">
+                        <p class="text-xs text-black font-extralight">03</p>
+                        <p class="text-4xl text-black font-bold">What I learned</p>
+                    </div>
+                    {#each overview.overviewLessons as desc}
+                        <p class="text-black text-lg">{desc}</p>
+                    {/each}
+                </div>
+            {/if}
+
+            {#if overview.overviewMedia.length > 0}
+                <div class="flex flex-col gap-8 w-3/4">
+                    <div class="flex flex-row gap-4 items-end">
+                        <p class="text-xs text-black font-extralight">04</p>
+                        <p class="text-4xl text-black font-bold">Gallery</p>
+                    </div>
+                    <!-- {#each overview.overviewLessons as desc}
+                        <p class="text-black text-lg">{desc}</p>
+                    {/each} -->
+                </div>
+            {/if}
+            
+        </div>
+    </div>
 </div>
     
 
