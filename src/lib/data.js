@@ -83,7 +83,8 @@ export const experience = [
         technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webgpu/webgpu-plain-wordmark.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg'],
         overviewLessons: ['Implementing a these experiences required learning AWS and multi-layered thinking and understanding of networking and serialisation in C#', 'Refactoring and documentation allows for all-around better code and all-round better quality of life for your fellow developers.'],
         overviewBuildSummary: [],
-        youtubeVideo: ''
+        youtubeVideo: '',
+        gameEmbed: ''
     },
     {
         role: 'Software Developer',
@@ -102,7 +103,8 @@ export const experience = [
         technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg'],
         overviewLessons: ['Communicating with the end users enables a developer to implement a detailed and tailored scope for software, creating something that is truly useful for the average user.', 'DRY and clean code is of utmost importance when working with huge object-oriented codebases to allow for the best developer experience possible for your co-workers.'],
         overviewBuildSummary: [],
-        youtubeVideo: ''
+        youtubeVideo: '',
+        gameEmbed: ''
     },
     {
         role: 'Associate Test Engineer',
@@ -121,7 +123,8 @@ export const experience = [
         technologies: ['https://raw.githubusercontent.com/odb/official-bash-logo/e44dab9f89aadd410ff04825b2692eab16711211/assets/Logos/Icons/SVG/128x128_white.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original-wordmark.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original-wordmark.svg'],
         overviewLessons: ['The importance of testing is paramount to delivering a successful product. It is inevitable that people will make mistakes in such large projects, and QA roles help to mitigate any problems that may happen.', 'When working in such a large company with countless different teams each playing their part, it is a valuable skill to be proactive and manage your time regardless of your surroundings.'],
         overviewBuildSummary: [],
-        youtubeVideo: ''
+        youtubeVideo: '',
+        gameEmbed: ''
     }
 ]
 
@@ -143,7 +146,8 @@ export const projects = [
         technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg'],
         overviewLessons: ['Timing the full process of receiving a message and processing it until you get an output from the model is very important for establishing the scalability of your application.', "Meaningfully splitting up work and therefore your app architecture into separable modules creates a loosely coupled and more editable system.", "Acceptance testing is critical for catching missed bugs or breaking changes not accounted for in the software, especially with an increasingly complex codebase."],
         overviewBuildSummary: [],
-        youtubeVideo: ''
+        youtubeVideo: '',
+        gameEmbed: ''
     },
     {
         role: 'Portfolio Website',
@@ -162,7 +166,8 @@ export const projects = [
         technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg'],
         overviewLessons: ['Designing a web-app from scratch takes time, and effort towards design and UX that should be respected. The polish that you apply to every detail of the site can be make or break.', "There are a lot of ways to implement the same design in the front-end of a web-app, it is my belief that occam's razor applies here, the simpler you can achieve the same goal, the better."],
         overviewBuildSummary: [],
-        youtubeVideo: ''
+        youtubeVideo: '',
+        gameEmbed: ''
     },
     {
         role: 'Aquetect',
@@ -181,7 +186,8 @@ export const projects = [
         technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg'],
         overviewLessons: ['I learned how crucial it is to manage your time wisely under such strict time conditions. To make a project in such a short time usually means that keeping the game loop and concept simple is a good way to go.', 'Making your own art is rewarding but with a high time-cost, it is important to develop the core functionality before you decide to adorn it with cool art.'],
         overviewBuildSummary: [],
-        youtubeVideo: ''
+        youtubeVideo: '',
+        gameEmbed: ''
     },
     {
         role: 'QUAD-RE',
@@ -200,7 +206,8 @@ export const projects = [
         technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg'],
         overviewLessons: ['Implementing design patterns allows for a structured and simpler way of designing increasingly complex software systems. It gives you an understanding of how the software should work at a more palatable higher level of abstraction.'],
         overviewBuildSummary: [],
-        youtubeVideo: ''
+        youtubeVideo: '',
+        gameEmbed: ''
     },
     {
         role: 'Bugs TDF',
@@ -219,7 +226,8 @@ export const projects = [
         technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg'],
         overviewLessons: ['Planning and design choices made early on in the project can streamline the development process by tenfold if well thought out. Exploring each individual task you need to complete regarding the code, art, sound, and design in a hierarchical manner on a piece of paper helps to maintain a specific scope and keep you on track.', 'Implementing the gameplay loop with simple blocks and shapes can save a lot of hassle in spotting mistakes or missing information from your initial design.'],
         overviewBuildSummary: [],
-        youtubeVideo: ''
+        youtubeVideo: '',
+        gameEmbed: ''
     },
     {
         role: 'AI Game Tester + Level Generator',
@@ -238,7 +246,8 @@ export const projects = [
         technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'],
         overviewLessons: ['Even with pseudocode and guidelines for implementation and performance, creating a functional model is never easy. Research is an arduous yet rewarding trial and error process that thrives with creative, out-of-the-box decisions.'],
         overviewBuildSummary: [],
-        youtubeVideo: 'https://www.youtube.com/embed/DcBS5_sZu2M?si=MyEdvmZmsVzmI8Y6'
+        youtubeVideo: 'https://www.youtube.com/embed/DcBS5_sZu2M?si=MyEdvmZmsVzmI8Y6',
+        gameEmbed: ''
     },
     {
         role: 'Skin Cancer Classifier',
@@ -257,7 +266,8 @@ export const projects = [
         technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-plain-wordmark.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg'],
         overviewLessons: ['"Garbage in, garbage out" is rule to live by when undertaking ML tasks. Thankfully methods such as data transformation, synthetic data, outlier removal, any many others can vastly increase the generalisability of the models you wish to train if done right'],
         overviewBuildSummary: [],
-        youtubeVideo: ''
+        youtubeVideo: '',
+        gameEmbed: ''
     },
     {
         role: 'Optimisation Algorithm Visualizer',
@@ -276,7 +286,8 @@ export const projects = [
         technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg'],
         overviewLessons: ['I was able to study a more visual version of how the algorithms solved problems without the need for gradient descent, and also learned to implement them in an object-oriented way with interchangable fitness functions and algorithms through the GUI library that I found.'],
         overviewBuildSummary: [],
-        youtubeVideo: ''
+        youtubeVideo: '',
+        gameEmbed: ''
     },
     {
         role: 'Genetically Modified Wolf Optimser',
@@ -295,7 +306,8 @@ export const projects = [
         technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-plain-wordmark.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg'],
         overviewLessons: ['The "No Free Lunch" theorem should always be taken into acount when applying optimisation algorithms to different fitness functions. It means that no individual algorithm can be seen as being objectively better than any other for every optimisation task.'],
         overviewBuildSummary: [],
-        youtubeVideo: ''
+        youtubeVideo: '',
+        gameEmbed: ''
     },
     {
         role: 'Video Game Sale Data Analytics',
@@ -314,7 +326,8 @@ export const projects = [
         technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg'],
         overviewLessons: ['There are no hard an fast rules to truly determine the perfect parameters for an algorithm to use when analysing data. It is very useful to create graphical representations of your findings along the way so that you can tune parameters for anything the algorithms have missed.'],
         overviewBuildSummary: [],
-        youtubeVideo: ''
+        youtubeVideo: '',
+        gameEmbed: ''
     },
     {
         role: 'Game Discussion Forum',
@@ -333,7 +346,8 @@ export const projects = [
         technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rails/rails-original-wordmark.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openapi/openapi-plain-wordmark.svg'],
         overviewLessons: ['One of the most rewarding tasks to do well is the unit and integration testing for your site. It helps catch countless issues that can slip passed anyone.', 'Creating a fully-functional web-application from the ground up is a time connsuming process with lots of potential setbacks. It is very important to stick to your scope and if time allows, improve upon it from there.'],
         overviewBuildSummary: [],
-        youtubeVideo: ''
+        youtubeVideo: '',
+        gameEmbed: ''
     },
     {
         role: 'Butterfly Image Classifier',
@@ -352,6 +366,7 @@ export const projects = [
         technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg'],
         overviewLessons: ['Transfer learning can be a very powerful and highly accessible tool for achieving good classification accuracy in a short amount of time.', 'Hyper-parameter tuning and and data-preprocessing can help to majorly boost generalisability of your model.'],
         overviewBuildSummary: [],
-        youtubeVideo: ''
+        youtubeVideo: '',
+        gameEmbed: ''
     }
 ]

@@ -22,7 +22,7 @@
         </div>
     </div>
     
-    <div class="flex flex-col md:flex-row md:place-content-between gap-8 overflow-x-scroll md:overflow-x-hidden">
+    <div class="flex flex-col md:flex-row md:place-content-between gap-8 overflow-x-scroll md:overflow-x-hidden scrollbar-track-transparent">
         <div class="flex flex-row">
             <Button class="bg-[#F6F2EB] text-gray-600 font-light" size="sm" variant="ghost">GitHub</Button>
             <Button class="bg-[#F6F2EB] text-gray-600 font-light" size="sm" variant="ghost">LinkedIn</Button>

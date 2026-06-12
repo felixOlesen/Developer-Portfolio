@@ -8,7 +8,7 @@
         <a href="/"  class="text-lg text-gray-600">Felix Sylvest Olesen</a>
         <p class="text-sm text-gray-600 font-extralight">- Software Engineer</p>
     </div>
-    <div class="flex w-full h-full place-content-start md:place-content-end border-gray-400 border-b-1 md:border-0 md:w-7/16 md:h-full items-center overflow-x-scroll md:overflow-x-hidden">
+    <div class="flex w-full h-full place-content-start md:place-content-end border-gray-400 border-b-1 md:border-0 md:w-7/16 md:h-full items-center overflow-x-scroll md:overflow-x-hidden scrollbar-track-transparent">
         <Button href="/" class="text-gray-600 font-light" size="sm" variant="ghost">Work</Button>
         <Button href="/aboutMe" class="text-gray-600 font-light" size="sm" variant="ghost">About</Button>
         <Button href="/resume" class="text-gray-600 font-light" size="sm" variant="ghost">Resume</Button>

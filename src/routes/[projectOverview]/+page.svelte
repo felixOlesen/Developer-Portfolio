@@ -1,9 +1,7 @@
 <script lang="ts">
-    import Button from "$lib/components/ui/button/button.svelte";
     import { onNavigate } from '$app/navigation';
     import MinusIcon from "@lucide/svelte/icons/minus";
     import MoveUpRight from "@lucide/svelte/icons/move-up-right";
-
 
     let { data } = $props();
     const overview = $derived(data.projectOverview);
@@ -23,36 +21,43 @@
 
 </script>
 
-<div class="flex flex-col w-full md:w-13/16 border place-self-center gap-16 mt-20">
+<div class="flex flex-col w-full md:w-13/16 place-self-center gap-16 mt-20 px-4 md:px-0">
     <div class="flex flex-row items-center gap-1">
         <MinusIcon class="text-[#B45F38] text-2xl"/> <p class="text-[#B45F38] text-2xl">Overview</p>
     </div>
-    <div class="flex flex-row gap-8 items-center">
+    <div class="flex flex-col md:flex-row gap-8 items-center">
         <p class="text-black text-8xl font-bold">{overview.role}</p>
-        <p class="px-2 py-1 border border-[#B45F38] rounded-full text-[#B45F38] place-self-end font-bold">{overview.projectOrProfession}</p>
+        <p class="px-6 py-1 place-content-center border border-[#B45F38] rounded-full text-[#B45F38] place-self-start md:place-self-end font-bold">{overview.projectOrProfession}</p>
     </div>
     <p class="text-2xl font-light w-5/8 text-gray-600">{overview.description}</p>
-    <div class="flex flex-row border rounded-xl w-full bg-[#EEE9E0]">
-        <div class="flex flex-col border-r-1 pl-8 py-6 gap-2 w-1/4">
+    <div class="flex flex-col md:flex-row border rounded-xl w-full bg-[#EEE9E0]">
+        <div class="flex flex-col border-b-1 md:border-b-0 md:border-r-1 pl-8 py-6 gap-2 md:w-1/4">
             <p class="text-black font-extralight text-sm">Timeframe</p>
             <p class="text-black font-bold">{overview.duration}</p>
         </div>
-        <div class="flex flex-col border-r-1 pl-8 py-6 gap-2 w-1/4">
+        <div class="flex flex-col border-b-1 md:border-b-0 md:border-r-1 pl-8 py-6 gap-2 md:w-1/4">
             <p class="text-black font-extralight text-sm">Timeframe</p>
             <p class="text-black font-bold">7 Days</p>
         </div>
-        <div class="flex flex-col border-r-1 pl-8 py-6 gap-2 w-1/4">
+        <div class="flex flex-col border-b-1 md:border-b-0 md:border-r-1 pl-8 py-6 gap-2 md:w-1/4">
             <p class="text-black font-extralight text-sm">Timeframe</p>
             <p class="text-black font-bold">7 Days</p>
         </div>
-        <div class="flex flex-col pl-8 py-6 gap-2 w-1/4">
+        <div class="flex flex-col pl-8 py-6 gap-2 md:w-1/4">
             <p class="text-black font-extralight text-sm">Outcome</p>
             <p class="text-black font-bold">7 Days</p>
         </div>
     </div>
-    <div class="border w-full h-[500px] bg-[#857969] rounded-xl"></div>
-    <div class="flex flex-row">
-        <div class="flex flex-col w-1/4 gap-8">
+    {#if overview.youtubeVideo != ''}
+        <div class="border w-full h-[700px] bg-[#857969] rounded-xl p-8">
+            <iframe width="100%" height="100%" class="rounded-lg" src={overview.youtubeVideo} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    {/if}
+    {#if overview.gameEmbed != ''}
+        <div class="border w-full h-[500px] bg-[#857969] rounded-xl"></div>
+    {/if}
+    <div class="flex flex-col md:flex-row gap-4">
+        <div class="flex flex-col w-full md:w-1/4 gap-8 md:sticky md:top-0 h-full md:h-1/2">
             <div class="flex flex-col gap-3">
                 <p class="text-black text-sm font-extralight">Contents</p>
                 {#if overview.overviewDescription.length > 0}
@@ -111,7 +116,7 @@
                 {/if}
             </div>
         </div>
-        <div class="flex flex-col w-full md:w-3/4 border p-4 gap-20">
+        <div class="flex flex-col w-full md:w-3/4 p-4 gap-20">
             {#if overview.overviewDescription.length > 0}
                 <div class="flex flex-col gap-8 w-3/4">
                     <div class="flex flex-row gap-4 items-end">
@@ -150,14 +155,16 @@
             {/if}
 
             {#if overview.overviewMedia.length > 0}
-                <div class="flex flex-col gap-8 w-3/4">
+                <div class="flex flex-col gap-8 w-full h-screen">
                     <div class="flex flex-row gap-4 items-end">
                         <p class="text-xs text-black font-extralight">04</p>
                         <p class="text-4xl text-black font-bold">Gallery</p>
                     </div>
-                    <!-- {#each overview.overviewLessons as desc}
-                        <p class="text-black text-lg">{desc}</p>
-                    {/each} -->
+                    <div class="flex flex-col rounded-xl bg-[#857969] overflow-y-scroll p-6 gap-8 scrollbar-thumb-[#EEE9E0] items-center scrollbar-track-transparent">
+                        {#each overview.overviewMedia as media}
+                            <enhanced:img src={media} loading="lazy" alt="overviewMedia" class="rounded-lg shadow-xl"/>
+                        {/each}
+                    </div>
                 </div>
             {/if}
             
