@@ -30,7 +30,7 @@
         <p class="px-6 py-1 place-content-center border border-[#B45F38] rounded-full text-[#B45F38] place-self-start md:place-self-end font-bold">{overview.projectOrProfession}</p>
     </div>
     <p class="text-2xl font-light w-5/8 text-gray-600">{overview.description}</p>
-    <div class="flex flex-col md:flex-row border rounded-xl w-full bg-[#EEE9E0]">
+    <!-- <div class="flex flex-col md:flex-row border rounded-xl w-full bg-[#EEE9E0]">
         <div class="flex flex-col border-b-1 md:border-b-0 md:border-r-1 pl-8 py-6 gap-2 md:w-1/4">
             <p class="text-black font-extralight text-sm">Timeframe</p>
             <p class="text-black font-bold">{overview.duration}</p>
@@ -47,7 +47,7 @@
             <p class="text-black font-extralight text-sm">Outcome</p>
             <p class="text-black font-bold">7 Days</p>
         </div>
-    </div>
+    </div> -->
     {#if overview.youtubeVideo != ''}
         <div class="border w-full h-[700px] bg-[#857969] rounded-xl p-8">
             <iframe width="100%" height="100%" class="rounded-lg" src={overview.youtubeVideo} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
