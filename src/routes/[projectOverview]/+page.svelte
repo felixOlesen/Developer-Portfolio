@@ -1,8 +1,7 @@
 <script lang="ts">
-    import Socials from "../socials.svelte";
-    import Button from "$lib/components/ui/button/button.svelte";
     import { onNavigate } from '$app/navigation';
-
+    import MinusIcon from "@lucide/svelte/icons/minus";
+    import MoveUpRight from "@lucide/svelte/icons/move-up-right";
 
     let { data } = $props();
     const overview = $derived(data.projectOverview);
@@ -22,7 +21,160 @@
 
 </script>
 
-<div class="flex flex-col sm:m-0 sm:flex-row w-screen h-screen">
+<div class="flex flex-col w-full md:w-13/16 place-self-center gap-16 mt-20 px-4 md:px-0">
+    <div class="flex flex-row items-center gap-1">
+        <MinusIcon class="text-[#B45F38] text-2xl"/> <p class="text-[#B45F38] text-2xl">Overview</p>
+    </div>
+    <div class="flex flex-col md:flex-row gap-8 items-center">
+        <p class="text-black text-8xl font-bold">{overview.role}</p>
+        <p class="px-6 py-1 place-content-center border border-[#B45F38] rounded-full text-[#B45F38] place-self-start md:place-self-end font-bold">{overview.projectOrProfession}</p>
+    </div>
+    <p class="text-2xl font-light w-5/8 text-gray-600">{overview.description}</p>
+    <div class="flex flex-col md:flex-row border rounded-xl w-full bg-[#EEE9E0]">
+        <div class="flex flex-col border-b-1 md:border-b-0 md:border-r-1 pl-8 py-6 gap-2 md:w-1/4">
+            <p class="text-black font-extralight text-sm">Timeframe</p>
+            <p class="text-black font-bold">{overview.duration}</p>
+        </div>
+        <div class="flex flex-col border-b-1 md:border-b-0 md:border-r-1 pl-8 py-6 gap-2 md:w-1/4">
+            <p class="text-black font-extralight text-sm">Timeframe</p>
+            <p class="text-black font-bold">7 Days</p>
+        </div>
+        <div class="flex flex-col border-b-1 md:border-b-0 md:border-r-1 pl-8 py-6 gap-2 md:w-1/4">
+            <p class="text-black font-extralight text-sm">Timeframe</p>
+            <p class="text-black font-bold">7 Days</p>
+        </div>
+        <div class="flex flex-col pl-8 py-6 gap-2 md:w-1/4">
+            <p class="text-black font-extralight text-sm">Outcome</p>
+            <p class="text-black font-bold">7 Days</p>
+        </div>
+    </div>
+    {#if overview.youtubeVideo != ''}
+        <div class="border w-full h-[700px] bg-[#857969] rounded-xl p-8">
+            <iframe width="100%" height="100%" class="rounded-lg" src={overview.youtubeVideo} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    {/if}
+    {#if overview.gameEmbed != ''}
+        <div class="border w-full h-[500px] bg-[#857969] rounded-xl"></div>
+    {/if}
+    <div class="flex flex-col md:flex-row gap-4">
+        <div class="flex flex-col w-full md:w-1/4 gap-8 md:sticky md:top-0 h-full md:h-1/2">
+            <div class="flex flex-col gap-3">
+                <p class="text-black text-sm font-extralight">Contents</p>
+                {#if overview.overviewDescription.length > 0}
+                    <div class="flex flex-row border-gray-400 border-b-1 p-2 gap-2">
+                        <p class="text-black text-sm font-extralight">01</p>
+                        <p class="text-black text-sm font-heavy">Overview</p>
+                    </div>
+                {/if}
+                
+                {#if overview.overviewBuildSummary.length > 0}
+                    <div class="flex flex-row border-gray-400 border-b-1 p-2 gap-2">
+                        <p class="text-black text-sm font-extralight">02</p>
+                        <p class="text-black text-sm font-heavy">What I Built</p>
+                    </div>
+                {/if}
+                
+                {#if overview.overviewLessons.length > 0}
+                    <div class="flex flex-row border-gray-400 border-b-1 p-2 gap-2">
+                        <p class="text-black text-sm font-extralight">03</p>
+                        <p class="text-black text-sm font-heavy">What I Learned</p>
+                    </div>
+                {/if}
+                
+                {#if overview.overviewMedia.length > 0}
+                    <div class="flex flex-row border-gray-400 border-b-1 p-2 gap-2">
+                        <p class="text-black text-sm font-extralight">04</p>
+                        <p class="text-black text-sm font-heavy">Gallery</p>
+                    </div>
+                {/if}
+                
+            </div>
+            <div class="flex flex-col gap-3">
+                <p class="text-black text-sm font-extralight">Built With</p>
+                <div class="flex flex-row flex-wrap gap-2">
+                    {#each overview.tags as technology}
+                        <p class="text-black text-xs font-light px-2 py-1 rounded-full border">{technology}</p>
+                        
+                    {/each}
+                </div>
+            </div>
+            <div class="flex flex-col gap-3">
+                {#if overview.githubLink != '' && overview.alternateLink != ''}
+                    <p class="text-black text-sm font-extralight">Links</p>
+                {/if}
+                {#if overview.githubLink != ''}
+                    <a href={overview.githubLink} class="flex flex-row border rounded-xl px-4 py-3 place-content-between items-center">
+                        <p class="text-black text-sm">See On Github</p> 
+                        <MoveUpRight class="text-black"/>
+                    </a>
+                {/if}
+                {#if overview.alternateLink != ''}
+                    <a href={overview.alternateLink} class="flex flex-row border rounded-xl px-4 py-3 place-content-between items-center">
+                        <p class="text-black text-sm">Related Site</p> 
+                        <MoveUpRight class="text-black"/>
+                    </a>
+                {/if}
+            </div>
+        </div>
+        <div class="flex flex-col w-full md:w-3/4 p-4 gap-20">
+            {#if overview.overviewDescription.length > 0}
+                <div class="flex flex-col gap-8 w-3/4">
+                    <div class="flex flex-row gap-4 items-end">
+                        <p class="text-xs text-black font-extralight">01</p>
+                        <p class="text-4xl text-black font-bold">Overview</p>
+                    </div>
+                    {#each overview.overviewDescription as desc}
+                        <p class="text-black text-lg">{desc}</p>
+                    {/each}
+                </div>
+            {/if}
+            
+            {#if overview.overviewBuildSummary.length > 0}
+                <div class="flex flex-col gap-8 w-3/4">
+                    <div class="flex flex-row gap-4 items-end">
+                        <p class="text-xs text-black font-extralight">02</p>
+                        <p class="text-4xl text-black font-bold">What I learned</p>
+                    </div>
+                    {#each overview.overviewBuildSummary as desc}
+                        <p class="text-black text-lg">{desc}</p>
+                    {/each}
+                </div>
+                
+            {/if}
+            
+            {#if overview.overviewLessons.length > 0}
+                <div class="flex flex-col gap-8 w-3/4">
+                    <div class="flex flex-row gap-4 items-end">
+                        <p class="text-xs text-black font-extralight">03</p>
+                        <p class="text-4xl text-black font-bold">What I learned</p>
+                    </div>
+                    {#each overview.overviewLessons as desc}
+                        <p class="text-black text-lg">{desc}</p>
+                    {/each}
+                </div>
+            {/if}
+
+            {#if overview.overviewMedia.length > 0}
+                <div class="flex flex-col gap-8 w-full h-screen">
+                    <div class="flex flex-row gap-4 items-end">
+                        <p class="text-xs text-black font-extralight">04</p>
+                        <p class="text-4xl text-black font-bold">Gallery</p>
+                    </div>
+                    <div class="flex flex-col rounded-xl bg-[#857969] overflow-y-scroll p-6 gap-8 scrollbar-thumb-[#EEE9E0] items-center scrollbar-track-transparent">
+                        {#each overview.overviewMedia as media}
+                            <enhanced:img src={media} loading="lazy" alt="overviewMedia" class="rounded-lg shadow-xl"/>
+                        {/each}
+                    </div>
+                </div>
+            {/if}
+            
+        </div>
+    </div>
+</div>
+    
+
+
+<!-- <div class="flex flex-col sm:m-0 sm:flex-row w-screen h-screen">
     
     <div class="flex flex-row h-fit space-x-3 sm:space-x-0 sm:flex-col sm:h-full ml-6">
         <Button class="mt-4 rounded-xl bg-secondary shadow-xl hover:deepInnerShadow fill-white hover:fill-border" href="/">
@@ -37,12 +189,10 @@
             </svg>
         </Button>
         <Socials></Socials>
-    </div>
-    <div class="flex flex-col sm:flex-row w-full justify-center p-3 sm:p-0">
-        <!-- Project Text -->
+    </div> -->
+    <!-- <div class="flex flex-col sm:flex-row w-full justify-center p-3 sm:p-0">
         <div class="flex flex-col w-full space-y-6 m-0 pt-3 sm:w-1/2 sm:m-4 sm:pt-0">
             <div class="flex flex-col rounded-xl bg-primary deepInnerShadow p-3">
-                <!-- Header -->
                 <div class="flex flex-row w-full">
                     <div class="flex flex-col w-1/2 p-1">
                         <div>
@@ -53,7 +203,6 @@
                         </div>
                     </div>
                     <div class="flex flex-row w-1/2 place-content-end pr-1 space-x-2">
-                        <!-- Github Link -->
                         {#if overview.githubLink !== ''}
                             <a href={overview.githubLink} aria-label="Visit the Github repo!">
                                 <svg class={hoverClass} width="35px" height="35px" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +211,6 @@
                             </a>
                         {/if}
 
-                        <!-- Alternate Link -->
                         {#if overview.alternateLink !== ''}
                             <a href={overview.alternateLink} aria-label="Check it out!">
                                 <svg class={hoverClass} width="35px" height="35px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -77,7 +225,6 @@
                         
                     </div>
                 </div>
-                <!-- Technologies Used -->
                 <div class="flex flex-col space-y-2 p-2">
                     <div class=""><h2 class="text-md font-extralight text-white/70">Technologies</h2></div>
                     <div class="flex flex=row flex-wrap space-x-3 p-3">
@@ -105,7 +252,6 @@
             </div>
         </div>
     
-        <!-- Project Media -->
        {#if overview.overviewMedia.length > 0 || overview.youtubeVideo !== ''}
             <div class="flex flex-col w-full sm:w-1/2 space-y-6 p-4 scroller items-center">
                 {#if overview.youtubeVideo !== ''}
@@ -127,4 +273,4 @@
             </div>
          {/if}
     </div>
-</div>
+</div> -->
