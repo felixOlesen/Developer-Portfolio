@@ -46,7 +46,7 @@
                     <enhanced:img class="object-fill" src={project.overviewMedia[0]} alt="overviewMedia" loading="lazy"/>                
                 </div>
             {:else}
-                <p class="border text-white font-bold rounded-xl p-3 bg-[#857969] w-[325px] lg:w-[375px] h-[225px] overflow-y-scroll place-self-center place-content-center">{project.description}</p>
+                <p class="border text-white font-bold rounded-xl p-3 bg-[#857969] w-[325px] lg:w-[375px] h-[225px] overflow-y-scroll scrollbar-track-transparent place-self-center place-content-center">{project.description}</p>
             {/if}
         <div class="flex flex-row  w-full flex-wrap gap-1">
             <p  class="text-black font-bold text-xl">{project.role}</p> {#if project.orgOrEvent != ''}<p class="text-black font-bold text-xl">{'- ' + project.orgOrEvent}</p> {/if}
