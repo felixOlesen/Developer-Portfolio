@@ -2,6 +2,7 @@
     import { onNavigate } from '$app/navigation';
     import MinusIcon from "@lucide/svelte/icons/minus";
     import MoveUpRight from "@lucide/svelte/icons/move-up-right";
+  import { projects } from '$lib/data.js';
 
     let { data } = $props();
     const overview = $derived(data.projectOverview);
@@ -62,7 +63,19 @@
         </div>
     {/if}
     {#if overview.gameEmbed != ''}
-        <div class="border w-full h-[500px] bg-[#857969] rounded-xl"></div>
+        <div class="flex flex-col items-center p-1 border w-full h-[750px] bg-[#222222] rounded-xl pb-6">
+            <iframe width="100%" height="100%" class="rounded-lg" src={overview.gameEmbed} title="Pico8 Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="flex flex-col w-full md:w-5/12 gap-2">
+                <p class="font-bold">Controls</p>
+                {#each overview.gameControls as control}
+                <div class="flex flex-row gap-3">
+                    <p class="font-light">{control[0]}</p>
+                    <p class="font-bold">:</p>
+                    <p class="font-light">{control[1]}</p>
+                </div>
+                {/each}
+            </div>
+        </div>
     {/if}
     <div class="flex flex-col md:flex-row gap-4">
         <div class="flex flex-col w-full md:w-1/4 gap-8 md:sticky md:top-0 h-full md:h-1/2">

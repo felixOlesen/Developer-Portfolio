@@ -57,6 +57,8 @@ import butterflyClassifier from '$lib/assets/butterflyClassifier/butterflyClassi
 
 import gameRadarSplash from '$lib/assets/gameRadar/gameRadar.webp?enhanced'
 
+import spaceBlitz from '$lib/assets/shmupPico8/spaceBlitz.webp?enhanced'
+
 
 export const info = {
     name: 'Felix Sylvest Olesen',
@@ -96,6 +98,7 @@ export const experience = [
         overviewBuildSummary: ['HELM was built with Unity for the front-end, Unity Relay and Lobby as well as AWS for the multiplayer backend. A key challenge in this project was to find a way to implement PDF and image file uploads through the Unity WebGL build of the project. This required some external javascript and emscripten usage. The image data needed to then be serialised and compressed to stay within the file transfer limits imposed by AWS.', 'CEASEFIRE involved a large amount of character animation and dialogue writing which definitely took me out of the usual developer work I was used to. I implemented the key character animations for the game through software called RIVE which was then ported over to Unity.', 'Living Bayeux Tapestry was the simplest of the three projects and involved simple development using primarily the Unity UI Toolkit which takes a more structured markup and CSS approach to game UI design.'],
         youtubeVideo: '',
         gameEmbed: '',
+        gameControls: [],
         techStack: 'AWS · Unity · C#',
         domain: 'Educational Games',
         outcome: '3 Sold Projects'
@@ -119,6 +122,7 @@ export const experience = [
         overviewBuildSummary: ['The House Points module for the repository needed refactoring into a sleek table design, which was done with simple CSS and Javascript along with more optimised SQL queries for the MySQL backend.', 'The Library catalogue module required further optimisation of SQL queries to allow for better filtering of library entries, while parsing and paginating thousands of library items.'],
         youtubeVideo: 'https://www.youtube.com/embed/2v3IZ-clM78?si=L6fodaIOHu0uu7gv',
         gameEmbed: '',
+        gameControls: [],
         techStack: 'PHP · Tailwind · MySQL',
         domain: 'EdTech',
         outcome: 'Open Source Contributions'
@@ -142,6 +146,7 @@ export const experience = [
         overviewBuildSummary: ['The in-house Python automation framework for testing was custom-built and utilised machine learning to conduct many image recognition tasks. Learning this codebase proved to be a challenge as there was a lack of documentation.', 'Developing a flask project to interact with the internal tooling infrastructure as big as the one at Sky was a large task, requiring many security hoops to be jumped through and making the most of minimal resource allocation.'],
         youtubeVideo: '',
         gameEmbed: '',
+        gameControls: [],
         techStack: 'Bash · Python',
         domain: 'Quality Assurance',
         outcome: 'Automated Tests and New In-House Tool'
@@ -149,6 +154,30 @@ export const experience = [
 ]
 
 export const projects = [
+    {
+        role: 'Space Blitz',
+        orgOrEvent: '',
+        duration: 'Apr 2025 - Jul 2026',
+        projectOrProfession: 'Game Dev Project',
+        description: 'Created a small Shoot-Em-Up game inspired by space invaders using the Pico-8 game engine and Lua.',
+        tags: ['Pico-8', 'Lua', 'Aseprite'],
+        skills: ['Pico-8', 'Lua', 'Aseprite'],
+        filterable: 'gameDev',
+        overviewDescription: [],
+        overviewMedia: [spaceBlitz],
+        githubLink: 'https://github.com/felixOlesen/PICO-8',
+        alternateLinks: {},
+        overviewDuration: 'January 2026 - March 2026',
+        technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg'],
+        overviewLessons: [],
+        overviewBuildSummary: [],
+        youtubeVideo: '',
+        gameEmbed: '/spaceBlitz/shmup.html',
+        gameControls: [['Arrow Keys','Move around the screen'],['X','Fire your gun'],['Z','Use your bomb ability']],
+        techStack: 'Pico-8 · Lua · Aseprite',
+        domain: 'Video Games',
+        outcome: 'Fully-Playable Arcade Game'
+    },
     {
         role: 'ML AKI Detection System',
         orgOrEvent: '',
@@ -168,6 +197,7 @@ export const projects = [
         overviewBuildSummary: ['The application was separated into message parsing, ML inference, and pager responses. This allowed The team and I to work on separate loosely-coupled parts of the application.', 'I worked primarily on message parsing which involved receiving and parsing MLLP HL7 messages. To ensure low latency, these messages were parsed as much as possible in ascii bytes to keep prevent expensive string conversions.', 'Extensive documentation and validation was implented as well as testing on PR through gitlab runners for good CI/CD practices.'],
         youtubeVideo: '',
         gameEmbed: '',
+        gameControls: [],
         techStack: 'Python · Docker · Kubernetes · Grafana',
         domain: 'Health Tech',
         outcome: 'Highly-Robust Backend System'
@@ -191,6 +221,7 @@ export const projects = [
         overviewBuildSummary: ['I utilised Figma and Claude Design in the first mockups of the site before re-implementing everything in Svelte.', 'It took many iterations to get to a more modern design that was responsive across devices and screen sizes.'],
         youtubeVideo: '',
         gameEmbed: '',
+        gameControls: [],
         techStack: 'Svelte · TypeScript · Tailwind',
         domain: 'Personal Project',
         outcome: 'Host Web App'
@@ -214,6 +245,7 @@ export const projects = [
         overviewBuildSummary: ['This project required speedy work to get as much done as possible before the game jam deadline. While under the time pressure a rule-tiling system and aqueduct linking system were made as add-ons to the Unity grid system.', 'Fast pixel-art tilemaps were made in a top-down isometric style using aseprite and allowed for quick prototyping.'],
         youtubeVideo: '',
         gameEmbed: '',
+        gameControls: [],
         techStack: 'Unity · C# · Aseprite',
         domain: 'Video Games',
         outcome: 'Systems Demo'
@@ -237,6 +269,7 @@ export const projects = [
         overviewBuildSummary: ['The key design choice in this project was figuring out the way that new segments of the endless runner would be generated and move according to the player position. It was decided for the player to actually remain stationary in the X axis while new segments would move past the player as the player dodges portions of the generated segment.'],
         youtubeVideo: '',
         gameEmbed: '',
+        gameControls: [],
         techStack: 'Unity · C#',
         domain: 'Video Games',
         outcome: 'Systems Demo'
@@ -260,6 +293,7 @@ export const projects = [
         overviewBuildSummary: ['A key design choice made in this project was how to de-couple the bullet functionality from the turret functionality. The damage and status effect information then gets transferred from the bullet ScriptableObject to the enemy instance on-collision.', 'This also required the implementation of object pooling when object instances of bullets, enemies and turrets were destroyed.'],
         youtubeVideo: '',
         gameEmbed: '',
+        gameControls: [],
         techStack: 'Unity · C#',
         domain: 'Video Games',
         outcome: 'Published Game'
@@ -283,6 +317,7 @@ export const projects = [
         overviewBuildSummary: ['I first needed to learn Unity and the Unity ML-Agents package for me to create a bsic 3D paltforming game, this was my first time learning it as well as C# as a language.', 'Once the game functionality was implemented, the agent was attached and reward signals were implemented into the game project at specific hooks in the game loop.', 'The game instance connected to a python backend that was taking in data from the game and agent observations to train a neural network on the respective reward from agent actions, resulting in more acurate actions being chosen as an output.'],
         youtubeVideo: 'https://www.youtube.com/embed/DcBS5_sZu2M?si=MyEdvmZmsVzmI8Y6',
         gameEmbed: '',
+        gameControls: [],
         techStack: 'Unity · C# · Python · Unity ML Agents',
         domain: 'RL Research',
         outcome: 'Dissertation Research'
@@ -306,6 +341,7 @@ export const projects = [
         overviewBuildSummary: [],
         youtubeVideo: '',
         gameEmbed: '',
+        gameControls: [],
         techStack: 'Python · Pytorch · CUDA',
         domain: 'Image Classification Research',
         outcome: 'Super-Human Skin Cancer Classifier'
@@ -329,6 +365,7 @@ export const projects = [
         overviewBuildSummary: [],
         youtubeVideo: '',
         gameEmbed: '',
+        gameControls: [],
         techStack: 'Python · PyGUI',
         domain: 'Optimisation Algorithms',
         outcome: 'Visualisation App'
@@ -352,6 +389,7 @@ export const projects = [
         overviewBuildSummary: [],
         youtubeVideo: '',
         gameEmbed: '',
+        gameControls: [],
         techStack: 'Python · Pytorch · CUDA',
         domain: 'Optimisation Algorithm Research',
         outcome: 'Novel Optimisation Algorithm'
@@ -375,6 +413,7 @@ export const projects = [
         overviewBuildSummary: [],
         youtubeVideo: '',
         gameEmbed: '',
+        gameControls: [],
         techStack: 'R · Clustering · Jupyter Notebooks',
         domain: 'Data Analytics',
         outcome: 'Insights into the Games Industry'
@@ -398,6 +437,7 @@ export const projects = [
         overviewBuildSummary: [],
         youtubeVideo: '',
         gameEmbed: '',
+        gameControls: [],
         techStack: 'Rails · Ruby · Bootstrap · Heroku',
         domain: 'Web App',
         outcome: 'Functioning Website'
@@ -421,6 +461,7 @@ export const projects = [
         overviewBuildSummary: [],
         youtubeVideo: '',
         gameEmbed: '',
+        gameControls: [],
         techStack: 'Python · PyTorch',
         domain: 'Machine Learning Competition',
         outcome: 'Highly-Accurate Butterfly Classifier'
