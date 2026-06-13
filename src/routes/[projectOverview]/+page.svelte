@@ -19,6 +19,14 @@
 
     let hoverClass:string = "transition ease-in-out hover:scale-105 fill-border hover:fill-white";
 
+    // svelte-ignore non_reactive_update
+    let alternateLinks: [string, string][] = [];
+
+    // svelte-ignore state_referenced_locally
+    if (overview.alternateLinks && Object.keys(overview.alternateLinks).length > 0) {
+        alternateLinks = Object.entries(overview.alternateLinks);
+    }  
+    
 </script>
 
 <div class="flex flex-col w-full md:w-13/16 place-self-center gap-16 mt-20 px-4 md:px-0">
@@ -30,24 +38,24 @@
         <p class="px-6 py-1 place-content-center border border-[#B45F38] rounded-full text-[#B45F38] place-self-start md:place-self-end font-bold">{overview.projectOrProfession}</p>
     </div>
     <p class="text-2xl font-light w-5/8 text-gray-600">{overview.description}</p>
-    <!-- <div class="flex flex-col md:flex-row border rounded-xl w-full bg-[#EEE9E0]">
+    <div class="flex flex-col md:flex-row border rounded-xl w-full bg-[#EEE9E0]">
         <div class="flex flex-col border-b-1 md:border-b-0 md:border-r-1 pl-8 py-6 gap-2 md:w-1/4">
             <p class="text-black font-extralight text-sm">Timeframe</p>
             <p class="text-black font-bold">{overview.duration}</p>
         </div>
         <div class="flex flex-col border-b-1 md:border-b-0 md:border-r-1 pl-8 py-6 gap-2 md:w-1/4">
-            <p class="text-black font-extralight text-sm">Timeframe</p>
-            <p class="text-black font-bold">7 Days</p>
+            <p class="text-black font-extralight text-sm">Tech Stack</p>
+            <p class="text-black font-bold">{overview.techStack}</p>
         </div>
         <div class="flex flex-col border-b-1 md:border-b-0 md:border-r-1 pl-8 py-6 gap-2 md:w-1/4">
-            <p class="text-black font-extralight text-sm">Timeframe</p>
-            <p class="text-black font-bold">7 Days</p>
+            <p class="text-black font-extralight text-sm">Domain</p>
+            <p class="text-black font-bold">{overview.domain}</p>
         </div>
         <div class="flex flex-col pl-8 py-6 gap-2 md:w-1/4">
             <p class="text-black font-extralight text-sm">Outcome</p>
-            <p class="text-black font-bold">7 Days</p>
+            <p class="text-black font-bold">{overview.outcome}</p>
         </div>
-    </div> -->
+    </div>
     {#if overview.youtubeVideo != ''}
         <div class="border w-full h-[700px] bg-[#857969] rounded-xl p-8">
             <iframe width="100%" height="100%" class="rounded-lg" src={overview.youtubeVideo} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -99,7 +107,7 @@
                 </div>
             </div>
             <div class="flex flex-col gap-3">
-                {#if overview.githubLink != '' && overview.alternateLink != ''}
+                {#if overview.githubLink != '' || overview.alternateLinks && Object.keys(overview.alternateLinks).length > 0}
                     <p class="text-black text-sm font-extralight">Links</p>
                 {/if}
                 {#if overview.githubLink != ''}
@@ -108,11 +116,13 @@
                         <MoveUpRight class="text-black"/>
                     </a>
                 {/if}
-                {#if overview.alternateLink != ''}
-                    <a href={overview.alternateLink} class="flex flex-row border rounded-xl px-4 py-3 place-content-between items-center">
-                        <p class="text-black text-sm">Related Site</p> 
-                        <MoveUpRight class="text-black"/>
-                    </a>
+                {#if alternateLinks.length > 0}
+                    {#each alternateLinks as entry}
+                        <a href={entry[1]} class="flex flex-row border rounded-xl px-4 py-3 place-content-between items-center">
+                            <p class="text-black text-sm">{entry[0]}</p> 
+                            <MoveUpRight class="text-black"/>
+                        </a>
+                    {/each}
                 {/if}
             </div>
         </div>
@@ -133,10 +143,10 @@
                 <div class="flex flex-col gap-8 w-3/4">
                     <div class="flex flex-row gap-4 items-end">
                         <p class="text-xs text-black font-extralight">02</p>
-                        <p class="text-4xl text-black font-bold">What I learned</p>
+                        <p class="text-4xl text-black font-bold">What I Built</p>
                     </div>
-                    {#each overview.overviewBuildSummary as desc}
-                        <p class="text-black text-lg">{desc}</p>
+                    {#each overview.overviewBuildSummary as descbuilt}
+                        <p class="text-black text-lg">{descbuilt}</p>
                     {/each}
                 </div>
                 

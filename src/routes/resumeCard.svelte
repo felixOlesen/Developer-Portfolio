@@ -36,7 +36,7 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 
 <div class="flex flex-col border-1 border-gray-400 p-4 rounded-xl bg-[#ECE5DB] overflow-hidden">
-    <a href="/{project.role}" class="flex flex-col gap-6">
+    <a href="/{project.role+project.orgOrEvent}" class="flex flex-col gap-6">
         <div class="flex flex-row  w-full place-content-between">
             <p class="text-gray-600 text-md font-extralight place-content-center">{projectNumber}</p>
             <p class="text-gray-600 border-1 rounded-full py-1 px-2 font-light">{project.projectOrProfession}</p>

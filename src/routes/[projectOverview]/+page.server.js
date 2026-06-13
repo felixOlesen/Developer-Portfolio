@@ -3,7 +3,7 @@ import { error } from '@sveltejs/kit';
 
 export function load({ params }) {
     const projectsAndExperience = experience.concat(projects);
-    const projectOverview = projectsAndExperience.find((projectOverview) => projectOverview.role === params.projectOverview)
+    const projectOverview = projectsAndExperience.find((projectOverview) => (projectOverview.role+projectOverview.orgOrEvent) === params.projectOverview)
 
     if (!projectOverview) throw error(404);
 
